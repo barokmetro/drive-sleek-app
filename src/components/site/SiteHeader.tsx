@@ -150,7 +150,7 @@ export function SiteHeader() {
         }`}
       >
         <div className="mx-auto grid max-w-7xl gap-10 px-8 py-10 md:grid-cols-3">
-          {(open ? MENU[open] : []).map((group) => (
+          {(open ? (MENU[open] ?? []) : []).map((group) => (
             <div key={group.title}>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 {group.title}
