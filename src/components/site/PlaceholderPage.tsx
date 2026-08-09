@@ -72,7 +72,9 @@ export function PlaceholderPage({
       )}
 
       {highlights.length > 0 && (
-        <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8 lg:pb-28" data-has-cards={cards.length > 0}>
+        <section
+          className={`mx-auto max-w-7xl px-5 pb-20 lg:px-8 lg:pb-28 ${cards.length > 0 ? "" : "pt-20 lg:pt-28"}`}
+        >
           <div className="grid gap-6 md:grid-cols-3">
             {highlights.map((item, i) => (
               <Reveal key={item} delay={i * 90}>
