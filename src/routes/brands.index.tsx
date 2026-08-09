@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Portfolio"
       title="Our Brands"
       description="Toyota, Suzuki and BYD — three brands, one authorised distributor. Explore the full MOENCO vehicle portfolio: Toyota reliability, Suzuki value and BYD electric performance, all backed by nationwide service."
+      vehicles={["land-cruiser","atto-3","dzire"]}
       highlights={["Authorised distributor since 1961","Nationwide showrooms and service bays","Factory-trained technicians"]}
     />
   );

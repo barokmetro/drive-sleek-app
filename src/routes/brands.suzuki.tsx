@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Brand"
       title="Suzuki"
       description="Compact, efficient and value-first mobility. Suzuki models distributed by MOENCO — from the Dzire commuter to compact crossovers, engineered for low running costs."
+      vehicles={["dzire"]}
       highlights={["Low total cost of ownership","Compact city footprint","Affordable genuine parts"]}
     />
   );

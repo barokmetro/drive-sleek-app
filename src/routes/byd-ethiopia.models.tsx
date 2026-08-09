@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Line-up"
       title="BYD Models"
       description="Atto 3, Seal, Dolphin and more. Compare the BYD range available in Ethiopia by range, charging speed, interior space and price."
+      vehicles={["atto-3"]}
       highlights={["Atto 3 crossover","Seal performance sedan","Dolphin city hatch"]}
     />
   );

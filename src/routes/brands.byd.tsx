@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Brand"
       title="BYD"
       description="Electric performance, ready for Ethiopian roads. BYD's all-electric line-up combines Blade Battery safety with long range and rapid charging, sold and serviced by MOENCO."
+      vehicles={["atto-3"]}
       highlights={["Blade Battery technology","Fast-charging support","EV-trained service network"]}
     />
   );

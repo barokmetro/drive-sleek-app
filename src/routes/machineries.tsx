@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Industrial"
       title="Machineries"
       description="Equipment built for demanding work. Forklifts, generators and construction equipment supplied, serviced and supported by MOENCO's industrial division."
+      vehicles={["hilux"]}
       highlights={["Forklifts and material handling","Standby and prime power","Construction equipment support"]}
     />
   );
