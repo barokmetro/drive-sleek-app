@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Search, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-suv.jpg";
@@ -53,9 +54,9 @@ export function Hero() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-full px-7">
-            <a href="#vehicles">
+            <Link to="/e-showroom">
               Explore Showroom <ChevronRight className="ml-1 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button
             asChild
@@ -63,7 +64,7 @@ export function Hero() {
             variant="outline"
             className="rounded-full border-charcoal-foreground/30 bg-transparent px-7 text-charcoal-foreground hover:bg-charcoal-foreground/10 hover:text-charcoal-foreground"
           >
-            <a href="#service">Book a Service</a>
+            <Link to="/service/book">Book a Service</Link>
           </Button>
         </div>
 
