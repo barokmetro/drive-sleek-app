@@ -53,8 +53,26 @@ export function PlaceholderPage({
         </div>
       </section>
 
-      {highlights.length > 0 && (
+      {cards.length > 0 && (
         <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+            Explore the range
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-black text-foreground sm:text-4xl">
+            Models to consider
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {cards.map((v, i) => (
+              <Reveal key={v.slug} delay={i * 80}>
+                <VehicleCard vehicle={v} index={i} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {highlights.length > 0 && (
+        <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8 lg:pb-28" data-has-cards={cards.length > 0}>
           <div className="grid gap-6 md:grid-cols-3">
             {highlights.map((item, i) => (
               <Reveal key={item} delay={i * 90}>
