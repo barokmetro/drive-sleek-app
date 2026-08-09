@@ -3,7 +3,7 @@ import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { VehicleCard } from "@/components/site/VehicleCard";
-import { VEHICLES, vehicleBySlug } from "@/data/vehicles";
+import { VEHICLES, vehicleBySlug, type Vehicle } from "@/data/vehicles";
 
 export const Route = createFileRoute("/vehicles/$slug")({
   loader: ({ params }) => {
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/vehicles/$slug")({
 });
 
 function VehicleDetail() {
-  const { vehicle } = Route.useLoaderData();
+  const { vehicle } = Route.useLoaderData() as { vehicle: Vehicle };
   const related = VEHICLES.filter((v) => v.slug !== vehicle.slug).slice(0, 3);
 
   return (

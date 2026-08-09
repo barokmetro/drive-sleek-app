@@ -38,6 +38,7 @@ import { Route as ServiceIndexRouteImport } from './routes/service.index'
 import { Route as ServiceBodyPaintRouteImport } from './routes/service.body-paint'
 import { Route as ServiceBookRouteImport } from './routes/service.book'
 import { Route as ServiceMaintenanceRouteImport } from './routes/service.maintenance'
+import { Route as VehiclesSlugRouteImport } from './routes/vehicles.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -184,6 +185,11 @@ const ServiceMaintenanceRoute = ServiceMaintenanceRouteImport.update({
   path: '/service/maintenance',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VehiclesSlugRoute = VehiclesSlugRouteImport.update({
+  id: '/vehicles/$slug',
+  path: '/vehicles/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -209,6 +215,7 @@ export interface FileRoutesByFullPath {
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about/': typeof AboutIndexRoute
   '/brands/': typeof BrandsIndexRoute
   '/byd-ethiopia/': typeof BydEthiopiaIndexRoute
@@ -240,6 +247,7 @@ export interface FileRoutesByTo {
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about': typeof AboutIndexRoute
   '/brands': typeof BrandsIndexRoute
   '/byd-ethiopia': typeof BydEthiopiaIndexRoute
@@ -272,6 +280,7 @@ export interface FileRoutesById {
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about/': typeof AboutIndexRoute
   '/brands/': typeof BrandsIndexRoute
   '/byd-ethiopia/': typeof BydEthiopiaIndexRoute
@@ -305,6 +314,7 @@ export interface FileRouteTypes {
     | '/service/body-paint'
     | '/service/book'
     | '/service/maintenance'
+    | '/vehicles/$slug'
     | '/about/'
     | '/brands/'
     | '/byd-ethiopia/'
@@ -336,6 +346,7 @@ export interface FileRouteTypes {
     | '/service/body-paint'
     | '/service/book'
     | '/service/maintenance'
+    | '/vehicles/$slug'
     | '/about'
     | '/brands'
     | '/byd-ethiopia'
@@ -367,6 +378,7 @@ export interface FileRouteTypes {
     | '/service/body-paint'
     | '/service/book'
     | '/service/maintenance'
+    | '/vehicles/$slug'
     | '/about/'
     | '/brands/'
     | '/byd-ethiopia/'
@@ -399,6 +411,7 @@ export interface RootRouteChildren {
   ServiceBodyPaintRoute: typeof ServiceBodyPaintRoute
   ServiceBookRoute: typeof ServiceBookRoute
   ServiceMaintenanceRoute: typeof ServiceMaintenanceRoute
+  VehiclesSlugRoute: typeof VehiclesSlugRoute
   AboutIndexRoute: typeof AboutIndexRoute
   BrandsIndexRoute: typeof BrandsIndexRoute
   BydEthiopiaIndexRoute: typeof BydEthiopiaIndexRoute
@@ -612,6 +625,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiceMaintenanceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/vehicles/$slug': {
+      id: '/vehicles/$slug'
+      path: '/vehicles/$slug'
+      fullPath: '/vehicles/$slug'
+      preLoaderRoute: typeof VehiclesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -639,6 +659,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServiceBodyPaintRoute: ServiceBodyPaintRoute,
   ServiceBookRoute: ServiceBookRoute,
   ServiceMaintenanceRoute: ServiceMaintenanceRoute,
+  VehiclesSlugRoute: VehiclesSlugRoute,
   AboutIndexRoute: AboutIndexRoute,
   BrandsIndexRoute: BrandsIndexRoute,
   BydEthiopiaIndexRoute: BydEthiopiaIndexRoute,
