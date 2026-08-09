@@ -2,15 +2,26 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
+import { VehicleCard } from "@/components/site/VehicleCard";
+import { vehicleBySlug } from "@/data/vehicles";
 
 type Props = {
   eyebrow: string;
   title: string;
   description: string;
   highlights?: string[];
+  /** Slugs from @/data/vehicles — rendered as premium, clickable vehicle cards. */
+  vehicles?: string[];
 };
 
-export function PlaceholderPage({ eyebrow, title, description, highlights = [] }: Props) {
+export function PlaceholderPage({
+  eyebrow,
+  title,
+  description,
+  highlights = [],
+  vehicles = [],
+}: Props) {
+  const cards = vehicles.map(vehicleBySlug).filter((v) => v !== undefined);
   return (
     <div>
       <section className="surface-charcoal">
