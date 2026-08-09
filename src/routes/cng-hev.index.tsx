@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "CN/HEV | MOENCO Ethiopia";
 const DESCRIPTION = "Explore MOENCO's hybrid and CNG line-up — proven technologies that cut fuel spend and emissions without compromising capability.";
 
-export const Route = createFileRoute("/cng-hev")({
+export const Route = createFileRoute("/cng-hev/")({
   head: () => ({
     meta: [
       { title: TITLE },

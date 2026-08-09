@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "BYD Ethiopia | MOENCO Ethiopia";
 const DESCRIPTION = "BYD Ethiopia brings Blade Battery safety, long range and rapid charging to the Ethiopian market, with MOENCO service backing.";
 
-export const Route = createFileRoute("/byd-ethiopia")({
+export const Route = createFileRoute("/byd-ethiopia/")({
   head: () => ({
     meta: [
       { title: TITLE },

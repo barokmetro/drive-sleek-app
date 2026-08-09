@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "Service | MOENCO Ethiopia";
 const DESCRIPTION = "Maintenance, diagnostics, body and paint — delivered by factory-trained technicians using genuine parts and calibrated tools.";
 
-export const Route = createFileRoute("/service")({
+export const Route = createFileRoute("/service/")({
   head: () => ({
     meta: [
       { title: TITLE },

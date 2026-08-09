@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "About MOENCO | MOENCO Ethiopia";
 const DESCRIPTION = "MOENCO has represented the world's leading automotive brands in Ethiopia since 1961, building the country's largest sales and service network.";
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute("/about/")({
   head: () => ({
     meta: [
       { title: TITLE },

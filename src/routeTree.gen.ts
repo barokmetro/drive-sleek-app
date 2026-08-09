@@ -10,33 +10,401 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EShowroomRouteImport } from './routes/e-showroom'
+import { Route as MachineriesRouteImport } from './routes/machineries'
+import { Route as AboutIndexRouteImport } from './routes/about.index'
+import { Route as AboutBranchesRouteImport } from './routes/about.branches'
+import { Route as AboutCareersRouteImport } from './routes/about.careers'
+import { Route as AboutNewsRouteImport } from './routes/about.news'
+import { Route as AboutStoryRouteImport } from './routes/about.story'
+import { Route as BrandsIndexRouteImport } from './routes/brands.index'
+import { Route as BrandsBydRouteImport } from './routes/brands.byd'
+import { Route as BrandsSuzukiRouteImport } from './routes/brands.suzuki'
+import { Route as BrandsToyotaRouteImport } from './routes/brands.toyota'
+import { Route as BydEthiopiaIndexRouteImport } from './routes/byd-ethiopia.index'
+import { Route as BydEthiopiaChargingRouteImport } from './routes/byd-ethiopia.charging'
+import { Route as BydEthiopiaModelsRouteImport } from './routes/byd-ethiopia.models'
+import { Route as BydEthiopiaTestDriveRouteImport } from './routes/byd-ethiopia.test-drive'
+import { Route as CngHevIndexRouteImport } from './routes/cng-hev.index'
+import { Route as CngHevCngRouteImport } from './routes/cng-hev.cng'
+import { Route as CngHevHybridRouteImport } from './routes/cng-hev.hybrid'
+import { Route as CngHevTechnologyRouteImport } from './routes/cng-hev.technology'
+import { Route as PartsIndexRouteImport } from './routes/parts.index'
+import { Route as PartsAccessoriesRouteImport } from './routes/parts.accessories'
+import { Route as PartsGenuineRouteImport } from './routes/parts.genuine'
+import { Route as PartsOrderRouteImport } from './routes/parts.order'
+import { Route as ServiceIndexRouteImport } from './routes/service.index'
+import { Route as ServiceBodyPaintRouteImport } from './routes/service.body-paint'
+import { Route as ServiceBookRouteImport } from './routes/service.book'
+import { Route as ServiceMaintenanceRouteImport } from './routes/service.maintenance'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EShowroomRoute = EShowroomRouteImport.update({
+  id: '/e-showroom',
+  path: '/e-showroom',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MachineriesRoute = MachineriesRouteImport.update({
+  id: '/machineries',
+  path: '/machineries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutBranchesRoute = AboutBranchesRouteImport.update({
+  id: '/about/branches',
+  path: '/about/branches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutCareersRoute = AboutCareersRouteImport.update({
+  id: '/about/careers',
+  path: '/about/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutNewsRoute = AboutNewsRouteImport.update({
+  id: '/about/news',
+  path: '/about/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutStoryRoute = AboutStoryRouteImport.update({
+  id: '/about/story',
+  path: '/about/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsIndexRoute = BrandsIndexRouteImport.update({
+  id: '/brands/',
+  path: '/brands/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsBydRoute = BrandsBydRouteImport.update({
+  id: '/brands/byd',
+  path: '/brands/byd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsSuzukiRoute = BrandsSuzukiRouteImport.update({
+  id: '/brands/suzuki',
+  path: '/brands/suzuki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandsToyotaRoute = BrandsToyotaRouteImport.update({
+  id: '/brands/toyota',
+  path: '/brands/toyota',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BydEthiopiaIndexRoute = BydEthiopiaIndexRouteImport.update({
+  id: '/byd-ethiopia/',
+  path: '/byd-ethiopia/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BydEthiopiaChargingRoute = BydEthiopiaChargingRouteImport.update({
+  id: '/byd-ethiopia/charging',
+  path: '/byd-ethiopia/charging',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BydEthiopiaModelsRoute = BydEthiopiaModelsRouteImport.update({
+  id: '/byd-ethiopia/models',
+  path: '/byd-ethiopia/models',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BydEthiopiaTestDriveRoute = BydEthiopiaTestDriveRouteImport.update({
+  id: '/byd-ethiopia/test-drive',
+  path: '/byd-ethiopia/test-drive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CngHevIndexRoute = CngHevIndexRouteImport.update({
+  id: '/cng-hev/',
+  path: '/cng-hev/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CngHevCngRoute = CngHevCngRouteImport.update({
+  id: '/cng-hev/cng',
+  path: '/cng-hev/cng',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CngHevHybridRoute = CngHevHybridRouteImport.update({
+  id: '/cng-hev/hybrid',
+  path: '/cng-hev/hybrid',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CngHevTechnologyRoute = CngHevTechnologyRouteImport.update({
+  id: '/cng-hev/technology',
+  path: '/cng-hev/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartsIndexRoute = PartsIndexRouteImport.update({
+  id: '/parts/',
+  path: '/parts/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartsAccessoriesRoute = PartsAccessoriesRouteImport.update({
+  id: '/parts/accessories',
+  path: '/parts/accessories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartsGenuineRoute = PartsGenuineRouteImport.update({
+  id: '/parts/genuine',
+  path: '/parts/genuine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartsOrderRoute = PartsOrderRouteImport.update({
+  id: '/parts/order',
+  path: '/parts/order',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceIndexRoute = ServiceIndexRouteImport.update({
+  id: '/service/',
+  path: '/service/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceBodyPaintRoute = ServiceBodyPaintRouteImport.update({
+  id: '/service/body-paint',
+  path: '/service/body-paint',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceBookRoute = ServiceBookRouteImport.update({
+  id: '/service/book',
+  path: '/service/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceMaintenanceRoute = ServiceMaintenanceRouteImport.update({
+  id: '/service/maintenance',
+  path: '/service/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/e-showroom': typeof EShowroomRoute
+  '/machineries': typeof MachineriesRoute
+  '/about/branches': typeof AboutBranchesRoute
+  '/about/careers': typeof AboutCareersRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/story': typeof AboutStoryRoute
+  '/brands/byd': typeof BrandsBydRoute
+  '/brands/suzuki': typeof BrandsSuzukiRoute
+  '/brands/toyota': typeof BrandsToyotaRoute
+  '/byd-ethiopia/charging': typeof BydEthiopiaChargingRoute
+  '/byd-ethiopia/models': typeof BydEthiopiaModelsRoute
+  '/byd-ethiopia/test-drive': typeof BydEthiopiaTestDriveRoute
+  '/cng-hev/cng': typeof CngHevCngRoute
+  '/cng-hev/hybrid': typeof CngHevHybridRoute
+  '/cng-hev/technology': typeof CngHevTechnologyRoute
+  '/parts/accessories': typeof PartsAccessoriesRoute
+  '/parts/genuine': typeof PartsGenuineRoute
+  '/parts/order': typeof PartsOrderRoute
+  '/service/body-paint': typeof ServiceBodyPaintRoute
+  '/service/book': typeof ServiceBookRoute
+  '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/about/': typeof AboutIndexRoute
+  '/brands/': typeof BrandsIndexRoute
+  '/byd-ethiopia/': typeof BydEthiopiaIndexRoute
+  '/cng-hev/': typeof CngHevIndexRoute
+  '/parts/': typeof PartsIndexRoute
+  '/service/': typeof ServiceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/e-showroom': typeof EShowroomRoute
+  '/machineries': typeof MachineriesRoute
+  '/about/branches': typeof AboutBranchesRoute
+  '/about/careers': typeof AboutCareersRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/story': typeof AboutStoryRoute
+  '/brands/byd': typeof BrandsBydRoute
+  '/brands/suzuki': typeof BrandsSuzukiRoute
+  '/brands/toyota': typeof BrandsToyotaRoute
+  '/byd-ethiopia/charging': typeof BydEthiopiaChargingRoute
+  '/byd-ethiopia/models': typeof BydEthiopiaModelsRoute
+  '/byd-ethiopia/test-drive': typeof BydEthiopiaTestDriveRoute
+  '/cng-hev/cng': typeof CngHevCngRoute
+  '/cng-hev/hybrid': typeof CngHevHybridRoute
+  '/cng-hev/technology': typeof CngHevTechnologyRoute
+  '/parts/accessories': typeof PartsAccessoriesRoute
+  '/parts/genuine': typeof PartsGenuineRoute
+  '/parts/order': typeof PartsOrderRoute
+  '/service/body-paint': typeof ServiceBodyPaintRoute
+  '/service/book': typeof ServiceBookRoute
+  '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/about': typeof AboutIndexRoute
+  '/brands': typeof BrandsIndexRoute
+  '/byd-ethiopia': typeof BydEthiopiaIndexRoute
+  '/cng-hev': typeof CngHevIndexRoute
+  '/parts': typeof PartsIndexRoute
+  '/service': typeof ServiceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/e-showroom': typeof EShowroomRoute
+  '/machineries': typeof MachineriesRoute
+  '/about/branches': typeof AboutBranchesRoute
+  '/about/careers': typeof AboutCareersRoute
+  '/about/news': typeof AboutNewsRoute
+  '/about/story': typeof AboutStoryRoute
+  '/brands/byd': typeof BrandsBydRoute
+  '/brands/suzuki': typeof BrandsSuzukiRoute
+  '/brands/toyota': typeof BrandsToyotaRoute
+  '/byd-ethiopia/charging': typeof BydEthiopiaChargingRoute
+  '/byd-ethiopia/models': typeof BydEthiopiaModelsRoute
+  '/byd-ethiopia/test-drive': typeof BydEthiopiaTestDriveRoute
+  '/cng-hev/cng': typeof CngHevCngRoute
+  '/cng-hev/hybrid': typeof CngHevHybridRoute
+  '/cng-hev/technology': typeof CngHevTechnologyRoute
+  '/parts/accessories': typeof PartsAccessoriesRoute
+  '/parts/genuine': typeof PartsGenuineRoute
+  '/parts/order': typeof PartsOrderRoute
+  '/service/body-paint': typeof ServiceBodyPaintRoute
+  '/service/book': typeof ServiceBookRoute
+  '/service/maintenance': typeof ServiceMaintenanceRoute
+  '/about/': typeof AboutIndexRoute
+  '/brands/': typeof BrandsIndexRoute
+  '/byd-ethiopia/': typeof BydEthiopiaIndexRoute
+  '/cng-hev/': typeof CngHevIndexRoute
+  '/parts/': typeof PartsIndexRoute
+  '/service/': typeof ServiceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/e-showroom'
+    | '/machineries'
+    | '/about/branches'
+    | '/about/careers'
+    | '/about/news'
+    | '/about/story'
+    | '/brands/byd'
+    | '/brands/suzuki'
+    | '/brands/toyota'
+    | '/byd-ethiopia/charging'
+    | '/byd-ethiopia/models'
+    | '/byd-ethiopia/test-drive'
+    | '/cng-hev/cng'
+    | '/cng-hev/hybrid'
+    | '/cng-hev/technology'
+    | '/parts/accessories'
+    | '/parts/genuine'
+    | '/parts/order'
+    | '/service/body-paint'
+    | '/service/book'
+    | '/service/maintenance'
+    | '/about/'
+    | '/brands/'
+    | '/byd-ethiopia/'
+    | '/cng-hev/'
+    | '/parts/'
+    | '/service/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/e-showroom'
+    | '/machineries'
+    | '/about/branches'
+    | '/about/careers'
+    | '/about/news'
+    | '/about/story'
+    | '/brands/byd'
+    | '/brands/suzuki'
+    | '/brands/toyota'
+    | '/byd-ethiopia/charging'
+    | '/byd-ethiopia/models'
+    | '/byd-ethiopia/test-drive'
+    | '/cng-hev/cng'
+    | '/cng-hev/hybrid'
+    | '/cng-hev/technology'
+    | '/parts/accessories'
+    | '/parts/genuine'
+    | '/parts/order'
+    | '/service/body-paint'
+    | '/service/book'
+    | '/service/maintenance'
+    | '/about'
+    | '/brands'
+    | '/byd-ethiopia'
+    | '/cng-hev'
+    | '/parts'
+    | '/service'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/e-showroom'
+    | '/machineries'
+    | '/about/branches'
+    | '/about/careers'
+    | '/about/news'
+    | '/about/story'
+    | '/brands/byd'
+    | '/brands/suzuki'
+    | '/brands/toyota'
+    | '/byd-ethiopia/charging'
+    | '/byd-ethiopia/models'
+    | '/byd-ethiopia/test-drive'
+    | '/cng-hev/cng'
+    | '/cng-hev/hybrid'
+    | '/cng-hev/technology'
+    | '/parts/accessories'
+    | '/parts/genuine'
+    | '/parts/order'
+    | '/service/body-paint'
+    | '/service/book'
+    | '/service/maintenance'
+    | '/about/'
+    | '/brands/'
+    | '/byd-ethiopia/'
+    | '/cng-hev/'
+    | '/parts/'
+    | '/service/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  EShowroomRoute: typeof EShowroomRoute
+  MachineriesRoute: typeof MachineriesRoute
+  AboutBranchesRoute: typeof AboutBranchesRoute
+  AboutCareersRoute: typeof AboutCareersRoute
+  AboutNewsRoute: typeof AboutNewsRoute
+  AboutStoryRoute: typeof AboutStoryRoute
+  BrandsBydRoute: typeof BrandsBydRoute
+  BrandsSuzukiRoute: typeof BrandsSuzukiRoute
+  BrandsToyotaRoute: typeof BrandsToyotaRoute
+  BydEthiopiaChargingRoute: typeof BydEthiopiaChargingRoute
+  BydEthiopiaModelsRoute: typeof BydEthiopiaModelsRoute
+  BydEthiopiaTestDriveRoute: typeof BydEthiopiaTestDriveRoute
+  CngHevCngRoute: typeof CngHevCngRoute
+  CngHevHybridRoute: typeof CngHevHybridRoute
+  CngHevTechnologyRoute: typeof CngHevTechnologyRoute
+  PartsAccessoriesRoute: typeof PartsAccessoriesRoute
+  PartsGenuineRoute: typeof PartsGenuineRoute
+  PartsOrderRoute: typeof PartsOrderRoute
+  ServiceBodyPaintRoute: typeof ServiceBodyPaintRoute
+  ServiceBookRoute: typeof ServiceBookRoute
+  ServiceMaintenanceRoute: typeof ServiceMaintenanceRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  BrandsIndexRoute: typeof BrandsIndexRoute
+  BydEthiopiaIndexRoute: typeof BydEthiopiaIndexRoute
+  CngHevIndexRoute: typeof CngHevIndexRoute
+  PartsIndexRoute: typeof PartsIndexRoute
+  ServiceIndexRoute: typeof ServiceIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +416,235 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/e-showroom': {
+      id: '/e-showroom'
+      path: '/e-showroom'
+      fullPath: '/e-showroom'
+      preLoaderRoute: typeof EShowroomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/machineries': {
+      id: '/machineries'
+      path: '/machineries'
+      fullPath: '/machineries'
+      preLoaderRoute: typeof MachineriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/branches': {
+      id: '/about/branches'
+      path: '/about/branches'
+      fullPath: '/about/branches'
+      preLoaderRoute: typeof AboutBranchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/careers': {
+      id: '/about/careers'
+      path: '/about/careers'
+      fullPath: '/about/careers'
+      preLoaderRoute: typeof AboutCareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/news': {
+      id: '/about/news'
+      path: '/about/news'
+      fullPath: '/about/news'
+      preLoaderRoute: typeof AboutNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/story': {
+      id: '/about/story'
+      path: '/about/story'
+      fullPath: '/about/story'
+      preLoaderRoute: typeof AboutStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/': {
+      id: '/brands/'
+      path: '/brands'
+      fullPath: '/brands/'
+      preLoaderRoute: typeof BrandsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/byd': {
+      id: '/brands/byd'
+      path: '/brands/byd'
+      fullPath: '/brands/byd'
+      preLoaderRoute: typeof BrandsBydRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/suzuki': {
+      id: '/brands/suzuki'
+      path: '/brands/suzuki'
+      fullPath: '/brands/suzuki'
+      preLoaderRoute: typeof BrandsSuzukiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brands/toyota': {
+      id: '/brands/toyota'
+      path: '/brands/toyota'
+      fullPath: '/brands/toyota'
+      preLoaderRoute: typeof BrandsToyotaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/byd-ethiopia/': {
+      id: '/byd-ethiopia/'
+      path: '/byd-ethiopia'
+      fullPath: '/byd-ethiopia/'
+      preLoaderRoute: typeof BydEthiopiaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/byd-ethiopia/charging': {
+      id: '/byd-ethiopia/charging'
+      path: '/byd-ethiopia/charging'
+      fullPath: '/byd-ethiopia/charging'
+      preLoaderRoute: typeof BydEthiopiaChargingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/byd-ethiopia/models': {
+      id: '/byd-ethiopia/models'
+      path: '/byd-ethiopia/models'
+      fullPath: '/byd-ethiopia/models'
+      preLoaderRoute: typeof BydEthiopiaModelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/byd-ethiopia/test-drive': {
+      id: '/byd-ethiopia/test-drive'
+      path: '/byd-ethiopia/test-drive'
+      fullPath: '/byd-ethiopia/test-drive'
+      preLoaderRoute: typeof BydEthiopiaTestDriveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cng-hev/': {
+      id: '/cng-hev/'
+      path: '/cng-hev'
+      fullPath: '/cng-hev/'
+      preLoaderRoute: typeof CngHevIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cng-hev/cng': {
+      id: '/cng-hev/cng'
+      path: '/cng-hev/cng'
+      fullPath: '/cng-hev/cng'
+      preLoaderRoute: typeof CngHevCngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cng-hev/hybrid': {
+      id: '/cng-hev/hybrid'
+      path: '/cng-hev/hybrid'
+      fullPath: '/cng-hev/hybrid'
+      preLoaderRoute: typeof CngHevHybridRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cng-hev/technology': {
+      id: '/cng-hev/technology'
+      path: '/cng-hev/technology'
+      fullPath: '/cng-hev/technology'
+      preLoaderRoute: typeof CngHevTechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parts/': {
+      id: '/parts/'
+      path: '/parts'
+      fullPath: '/parts/'
+      preLoaderRoute: typeof PartsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parts/accessories': {
+      id: '/parts/accessories'
+      path: '/parts/accessories'
+      fullPath: '/parts/accessories'
+      preLoaderRoute: typeof PartsAccessoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parts/genuine': {
+      id: '/parts/genuine'
+      path: '/parts/genuine'
+      fullPath: '/parts/genuine'
+      preLoaderRoute: typeof PartsGenuineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parts/order': {
+      id: '/parts/order'
+      path: '/parts/order'
+      fullPath: '/parts/order'
+      preLoaderRoute: typeof PartsOrderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/': {
+      id: '/service/'
+      path: '/service'
+      fullPath: '/service/'
+      preLoaderRoute: typeof ServiceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/body-paint': {
+      id: '/service/body-paint'
+      path: '/service/body-paint'
+      fullPath: '/service/body-paint'
+      preLoaderRoute: typeof ServiceBodyPaintRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/book': {
+      id: '/service/book'
+      path: '/service/book'
+      fullPath: '/service/book'
+      preLoaderRoute: typeof ServiceBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/maintenance': {
+      id: '/service/maintenance'
+      path: '/service/maintenance'
+      fullPath: '/service/maintenance'
+      preLoaderRoute: typeof ServiceMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  EShowroomRoute: EShowroomRoute,
+  MachineriesRoute: MachineriesRoute,
+  AboutBranchesRoute: AboutBranchesRoute,
+  AboutCareersRoute: AboutCareersRoute,
+  AboutNewsRoute: AboutNewsRoute,
+  AboutStoryRoute: AboutStoryRoute,
+  BrandsBydRoute: BrandsBydRoute,
+  BrandsSuzukiRoute: BrandsSuzukiRoute,
+  BrandsToyotaRoute: BrandsToyotaRoute,
+  BydEthiopiaChargingRoute: BydEthiopiaChargingRoute,
+  BydEthiopiaModelsRoute: BydEthiopiaModelsRoute,
+  BydEthiopiaTestDriveRoute: BydEthiopiaTestDriveRoute,
+  CngHevCngRoute: CngHevCngRoute,
+  CngHevHybridRoute: CngHevHybridRoute,
+  CngHevTechnologyRoute: CngHevTechnologyRoute,
+  PartsAccessoriesRoute: PartsAccessoriesRoute,
+  PartsGenuineRoute: PartsGenuineRoute,
+  PartsOrderRoute: PartsOrderRoute,
+  ServiceBodyPaintRoute: ServiceBodyPaintRoute,
+  ServiceBookRoute: ServiceBookRoute,
+  ServiceMaintenanceRoute: ServiceMaintenanceRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  BrandsIndexRoute: BrandsIndexRoute,
+  BydEthiopiaIndexRoute: BydEthiopiaIndexRoute,
+  CngHevIndexRoute: CngHevIndexRoute,
+  PartsIndexRoute: PartsIndexRoute,
+  ServiceIndexRoute: ServiceIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

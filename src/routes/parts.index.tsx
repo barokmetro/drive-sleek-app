@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "Parts | MOENCO Ethiopia";
 const DESCRIPTION = "Order genuine parts and accessories for Toyota, Suzuki and BYD vehicles with guaranteed fitment and nationwide availability.";
 
-export const Route = createFileRoute("/parts")({
+export const Route = createFileRoute("/parts/")({
   head: () => ({
     meta: [
       { title: TITLE },

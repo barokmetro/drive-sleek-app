@@ -4,7 +4,7 @@ import { PlaceholderPage } from "@/components/site/PlaceholderPage";
 const TITLE = "Our Brands | MOENCO Ethiopia";
 const DESCRIPTION = "Explore the full MOENCO vehicle portfolio: Toyota reliability, Suzuki value and BYD electric performance, all backed by nationwide service.";
 
-export const Route = createFileRoute("/brands")({
+export const Route = createFileRoute("/brands/")({
   head: () => ({
     meta: [
       { title: TITLE },
