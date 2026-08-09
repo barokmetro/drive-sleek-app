@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Powertrain"
       title="Hybrid (HEV)"
       description="Self-charging efficiency, no plug required. Hybrid models recover braking energy to cut consumption in city traffic, with battery warranties and specialist servicing."
+      vehicles={["rav4","corolla"]}
       highlights={["No charging infrastructure needed","Quieter city driving","Long battery warranty"]}
     />
   );

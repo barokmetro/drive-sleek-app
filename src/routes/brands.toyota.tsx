@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Brand"
       title="Toyota"
       description="Sedans, SUVs, pickups and vans built to last. Discover the Toyota range in Ethiopia — Corolla, RAV4, Hilux, Hiace and the Land Cruiser family, with genuine parts and certified service."
+      vehicles={["land-cruiser","hilux","rav4","corolla"]}
       highlights={["Land Cruiser 300 & Prado","Hilux and Hiace for business","Hybrid-ready RAV4 and Corolla"]}
     />
   );

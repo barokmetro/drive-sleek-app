@@ -24,6 +24,7 @@ function Page() {
       eyebrow="Digital"
       title="E-Showroom"
       description="Browse the entire range online. Configure models, compare specifications and reserve your vehicle online — then complete the handover at your nearest branch."
+      vehicles={["land-cruiser","hilux","rav4","corolla","atto-3","dzire"]}
       highlights={["360° model views","Side-by-side comparison","Online reservation"]}
     />
   );
