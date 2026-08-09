@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader } from "@/components/site/SiteHeader";
 import { Hero } from "@/components/site/Hero";
 import { VehicleGrid } from "@/components/site/VehicleGrid";
 import { ServiceParts } from "@/components/site/ServiceParts";
 import { News } from "@/components/site/News";
-import { SiteFooter } from "@/components/site/SiteFooter";
 
 const TITLE = "MOENCO | Toyota, Suzuki & BYD Vehicles in Ethiopia";
 const DESCRIPTION =
@@ -26,15 +24,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      <SiteHeader />
-      <main>
-        <Hero />
-        <VehicleGrid />
-        <ServiceParts />
-        <News />
-      </main>
-      <SiteFooter />
-    </div>
+    <>
+      <Hero />
+      <VehicleGrid />
+      <ServiceParts />
+      <News />
+    </>
   );
 }

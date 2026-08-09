@@ -1,8 +1,40 @@
-const COLUMNS = [
-  { title: "Vehicles", links: ["Passenger", "SUV & Crossover", "Commercial", "Electric"] },
-  { title: "Machinery", links: ["Forklifts", "Generators", "Construction"] },
-  { title: "Ownership", links: ["Book a Service", "Genuine Parts", "Body & Paint"] },
-  { title: "Company", links: ["Our Story", "Branches", "Careers", "Contact"] },
+import { Link } from "@tanstack/react-router";
+
+const COLUMNS: { title: string; links: { label: string; to: string }[] }[] = [
+  {
+    title: "Brands",
+    links: [
+      { label: "Toyota", to: "/brands/toyota" },
+      { label: "Suzuki", to: "/brands/suzuki" },
+      { label: "BYD", to: "/brands/byd" },
+      { label: "E-Showroom", to: "/e-showroom" },
+    ],
+  },
+  {
+    title: "Machinery",
+    links: [
+      { label: "Machineries", to: "/machineries" },
+      { label: "Hybrid (HEV)", to: "/cng-hev/hybrid" },
+      { label: "CNG Vehicles", to: "/cng-hev/cng" },
+    ],
+  },
+  {
+    title: "Ownership",
+    links: [
+      { label: "Book a Service", to: "/service/book" },
+      { label: "Genuine Parts", to: "/parts/genuine" },
+      { label: "Body & Paint", to: "/service/body-paint" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "Our Story", to: "/about/story" },
+      { label: "Branches", to: "/about/branches" },
+      { label: "Careers", to: "/about/careers" },
+      { label: "Contact", to: "/contact" },
+    ],
+  },
 ];
 
 export function SiteFooter() {
@@ -30,13 +62,13 @@ export function SiteFooter() {
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {col.links.map((l) => (
-                    <li key={l}>
-                      <a
-                        href="#top"
+                    <li key={l.label}>
+                      <Link
+                        to={l.to}
                         className="text-sm text-muted-foreground transition-colors hover:text-primary"
                       >
-                        {l}
-                      </a>
+                        {l.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
