@@ -1,74 +1,127 @@
 import { Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+
+function FooterLink(props: { to: string; className?: string; children: React.ReactNode }) {
+  const AnyLink = Link as unknown as React.ComponentType<Record<string, unknown>>;
+  return <AnyLink {...props} />;
+}
 
 const COLUMNS: { title: string; links: { label: string; to: string }[] }[] = [
   {
-    title: "Brands",
+    title: "Vehicle",
     links: [
-      { label: "Toyota", to: "/brands/toyota" },
-      { label: "Suzuki", to: "/brands/suzuki" },
-      { label: "BYD", to: "/brands/byd" },
-      { label: "E-Showroom", to: "/e-showroom" },
+      { label: "Toyota Vehicles", to: "/brands/toyota" },
+      { label: "Duty free vehicles", to: "/duty-free-vehicles" },
+      { label: "Original Parts", to: "/parts/genuine" },
+      { label: "Quality Service", to: "/service/quality" },
+      { label: "Careers", to: "/about/careers" },
+      { label: "About", to: "/about" },
+      { label: "Contact", to: "/contact" },
     ],
   },
   {
     title: "Machinery",
     links: [
-      { label: "Machineries", to: "/machineries" },
-      { label: "Hybrid (HEV)", to: "/cng-hev/hybrid" },
-      { label: "CNG Vehicles", to: "/cng-hev/cng" },
+      { label: "Products", to: "/machinery/products" },
+      { label: "Parts", to: "/machinery/parts" },
+      { label: "Service", to: "/machinery/service" },
+      { label: "Machinery Rental", to: "/machinery/rental" },
+      { label: "Contact", to: "/machinery/contact" },
     ],
   },
   {
-    title: "Ownership",
+    title: "Parts",
     links: [
-      { label: "Book a Service", to: "/service/book" },
-      { label: "Genuine Parts", to: "/parts/genuine" },
+      { label: "Battery", to: "/parts/battery" },
+      { label: "Parts Overview", to: "/parts" },
+      { label: "Dealers", to: "/parts/dealers" },
+      { label: "Parts Requisition", to: "/parts/requisition" },
+      { label: "Parts Inquiry", to: "/parts/inquiry" },
+      { label: "Necessary Information to Buy Parts", to: "/parts/information" },
+      { label: "About Vehicle Parts", to: "/parts/about" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      { label: "Online Service Booking", to: "/service/book" },
+      { label: "Quality Service", to: "/service/quality" },
       { label: "Body & Paint", to: "/service/body-paint" },
+      { label: "Warranty", to: "/service/warranty" },
+      { label: "Recall", to: "/service/recall" },
+      { label: "Dash Board Information", to: "/service/dashboard" },
+      { label: "Do it yourself", to: "/service/diy" },
+      { label: "National Skills Contests", to: "/service/skills-contest" },
     ],
   },
   {
-    title: "Company",
+    title: "About",
     links: [
-      { label: "Our Story", to: "/about/story" },
-      { label: "Branches", to: "/about/branches" },
-      { label: "Careers", to: "/about/careers" },
-      { label: "Contact", to: "/contact" },
+      { label: "About", to: "/about" },
+      { label: "Career", to: "/about/careers" },
+      { label: "CSR", to: "/about/csr" },
+      { label: "FAQs", to: "/about/faqs" },
+      { label: "Our Strategy", to: "/about/strategy" },
     ],
   },
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-secondary">
+    <footer className="border-t border-border bg-[oklch(0.135_0.002_285)]">
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-[1.2fr_2fr]">
+        <div className="flex flex-wrap gap-3">
+          <FooterLink
+            to="/contact"
+            className="silver-glow inline-flex items-center gap-2 rounded-full border border-silver/35 bg-gradient-to-b from-[#232327] to-[#131315] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-foreground"
+          >
+            Contact Us <ArrowUpRight className="h-3.5 w-3.5" />
+          </FooterLink>
+          <FooterLink
+            to="/subscribe"
+            className="silver-glow inline-flex items-center gap-2 rounded-full border border-silver/35 bg-gradient-to-b from-[#232327] to-[#131315] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-foreground"
+          >
+            Subscribe To Newsletter <ArrowUpRight className="h-3.5 w-3.5" />
+          </FooterLink>
+        </div>
+
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.4fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-primary font-display text-sm font-black text-primary-foreground">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-silver/40 bg-card font-display text-sm font-black text-silver">
                 M
               </span>
-              <span className="font-display text-lg font-extrabold text-foreground">MOENCO</span>
+              <span>
+                <span className="block font-display text-lg font-extrabold text-chrome">
+                  MOENCO
+                </span>
+                <span className="block text-[9px] uppercase tracking-[0.28em] text-muted-foreground">
+                  An Inchcape Company
+                </span>
+              </span>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Authorised distributor of Toyota, Suzuki and BYD vehicles, machinery, genuine parts
-              and certified service across Ethiopia.
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              MOENCO is a subsidiary of Inchcape PLC, a global distribution &amp; retail leader
+              based in London.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
             {COLUMNS.map((col) => (
               <div key={col.title}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-silver">
                   {col.title}
                 </p>
+                <div className="chrome-rule mt-3 h-px w-full" />
                 <ul className="mt-4 space-y-2.5">
                   {col.links.map((l) => (
                     <li key={l.label}>
-                      <Link
+                      <FooterLink
                         to={l.to}
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                        className="text-sm text-muted-foreground transition-colors duration-300 hover:text-foreground"
                       >
                         {l.label}
-                      </Link>
+                      </FooterLink>
                     </li>
                   ))}
                 </ul>
@@ -76,8 +129,9 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
+
         <p className="mt-14 border-t border-border pt-6 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} MOENCO. All rights reserved.
+          © 2026 Moenco, All right reserved. Website designed by 360Ground
         </p>
       </div>
     </footer>
