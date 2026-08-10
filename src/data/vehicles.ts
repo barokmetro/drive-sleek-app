@@ -3,6 +3,10 @@ import suv from "@/assets/car-suv.jpg";
 import pickup from "@/assets/car-pickup.jpg";
 import ev from "@/assets/car-ev.jpg";
 import hero from "@/assets/hero-suv.jpg";
+import lc300 from "@/assets/veh-lc300.png";
+import corollaCross from "@/assets/veh-corolla-cross.png";
+import alto from "@/assets/veh-alto.png";
+import swift from "@/assets/veh-swift.png";
 
 export type Vehicle = {
   slug: string;
@@ -24,7 +28,7 @@ export const VEHICLES: Vehicle[] = [
     brand: "Toyota",
     category: "SUV",
     tagline: "The flagship that never asks for mercy",
-    image: hero,
+    image: lc300,
     intro:
       "Seventy years of expedition engineering distilled into one body-on-frame flagship. The Land Cruiser 300 pairs a twin-turbo powertrain with the GA-F platform for effortless torque on gravel, highland passes and city boulevards alike.",
     body: [
@@ -178,6 +182,87 @@ export const VEHICLES: Vehicle[] = [
       { title: "Class-leading economy", blurb: "Lightweight platform keeps consumption low." },
       { title: "City-sized footprint", blurb: "Easy parking and manoeuvring in dense traffic." },
       { title: "Affordable servicing", blurb: "Low parts cost and simple maintenance schedule." },
+    ],
+  },
+  {
+    slug: "corolla-cross-hybrid",
+    name: "Corolla Cross Hybrid",
+    brand: "Toyota",
+    category: "SUV",
+    tagline: "Hybrid poise in a compact crossover",
+    image: corollaCross,
+    intro:
+      "The Corolla Cross Hybrid brings self-charging efficiency to a crossover body — raised ride height, generous boot, and fuel figures that make sense in Addis traffic.",
+    body: [
+      "Built on the TNGA-C platform, the Corolla Cross Hybrid pairs a 1.8-litre Atkinson-cycle petrol engine with an electric motor that takes over at low speed. The result is quiet, smooth progress and real fuel savings on congested urban runs.",
+      "Inside, soft-touch surfaces, a 10.1-inch multimedia display and Toyota Safety Sense come as standard, while 440 litres of luggage space keep it genuinely practical for family duty.",
+    ],
+    specs: [
+      { label: "Engine", value: "1.8L petrol hybrid" },
+      { label: "Transmission", value: "e-CVT" },
+      { label: "Fuel type", value: "Petrol / self-charging hybrid" },
+      { label: "System output", value: "103 kW / 140 hp" },
+      { label: "Boot space", value: "440 L" },
+      { label: "Warranty", value: "3 years vehicle / 8 years hybrid battery" },
+    ],
+    features: [
+      { title: "Self-charging", blurb: "No plug required — the battery tops up as you drive." },
+      { title: "Raised ride height", blurb: "Confidence over broken city surfaces." },
+      { title: "Toyota Safety Sense", blurb: "Pre-collision braking and lane tracing assist." },
+    ],
+  },
+  {
+    slug: "alto-800",
+    name: "Suzuki ALTO 800",
+    brand: "Suzuki",
+    category: "Passenger",
+    tagline: "The smartest way into car ownership",
+    image: alto,
+    intro:
+      "Small footprint, small fuel bill, full Suzuki reliability. The ALTO 800 is built for dense city driving and first-time owners.",
+    body: [
+      "A featherweight body and a frugal 796cc engine keep running costs remarkably low, while the tight turning circle makes narrow streets and busy markets easy work.",
+      "Parts are inexpensive and widely stocked through MOENCO branches, so scheduled maintenance stays predictable across the life of the car.",
+    ],
+    specs: [
+      { label: "Engine", value: "796cc 3-cylinder petrol" },
+      { label: "Transmission", value: "5-speed manual" },
+      { label: "Fuel type", value: "Petrol" },
+      { label: "Seating", value: "5 passengers" },
+      { label: "Turning radius", value: "4.6 m" },
+      { label: "Warranty", value: "3 years / 100,000 km" },
+    ],
+    features: [
+      { title: "Lowest running costs", blurb: "Exceptional economy in stop-start traffic." },
+      { title: "Easy to park", blurb: "Compact dimensions and light steering." },
+      { title: "Affordable parts", blurb: "Genuine components held in local stock." },
+    ],
+  },
+  {
+    slug: "swift",
+    name: "Suzuki SWIFT",
+    brand: "Suzuki",
+    category: "Passenger",
+    tagline: "Light, quick and genuinely fun",
+    image: swift,
+    intro:
+      "The SWIFT turns the daily commute into something enjoyable — a lightweight HEARTECT platform, eager steering and a cabin that punches above its class.",
+    body: [
+      "Suzuki's obsession with weight reduction pays off here: the SWIFT feels alert through corners and sips fuel on the open road, without the harshness usually attached to small hatchbacks.",
+      "Standard equipment includes a touchscreen infotainment system with smartphone connectivity, dual airbags, ABS with EBD and rear parking sensors.",
+    ],
+    specs: [
+      { label: "Engine", value: "1.2L DualJet petrol" },
+      { label: "Transmission", value: "5-speed manual or AGS" },
+      { label: "Fuel type", value: "Petrol" },
+      { label: "Seating", value: "5 passengers" },
+      { label: "Boot space", value: "268 L" },
+      { label: "Warranty", value: "3 years / 100,000 km" },
+    ],
+    features: [
+      { title: "HEARTECT platform", blurb: "Rigid and light for sharp handling." },
+      { title: "DualJet efficiency", blurb: "Twin injectors improve combustion and economy." },
+      { title: "Connected infotainment", blurb: "Smartphone mirroring as standard." },
     ],
   },
 ];

@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { PageFade } from "@/components/site/PageFade";
+import { FloatingWidgets } from "@/components/site/FloatingWidgets";
 
 function NotFoundComponent() {
   return (
@@ -137,6 +138,7 @@ function RootComponent() {
           </PageFade>
         </main>
         <SiteFooter />
+        <FloatingWidgets />
       </div>
     </QueryClientProvider>
   );
