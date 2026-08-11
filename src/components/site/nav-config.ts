@@ -21,7 +21,7 @@ export const NAV: NavItem[] = [
     to: "/parts",
     children: [
       { label: "Battery", blurb: "Genuine batteries & fitting", to: "/parts/battery" },
-      { label: "Parts Overview", blurb: "The full genuine catalogue", to: "/parts" },
+      { label: "Parts Overview", blurb: "The full genuine catalogue", to: "/parts/overview" },
       { label: "Dealers", blurb: "Authorised parts dealers", to: "/parts/dealers" },
       { label: "Parts Requisition", blurb: "Request stock or a quote", to: "/parts/requisition" },
       {

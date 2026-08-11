@@ -54,6 +54,7 @@ import { Route as PartsGenuineRouteImport } from './routes/parts.genuine'
 import { Route as PartsInformationRouteImport } from './routes/parts.information'
 import { Route as PartsInquiryRouteImport } from './routes/parts.inquiry'
 import { Route as PartsOrderRouteImport } from './routes/parts.order'
+import { Route as PartsOverviewRouteImport } from './routes/parts.overview'
 import { Route as PartsRequisitionRouteImport } from './routes/parts.requisition'
 import { Route as ServiceIndexRouteImport } from './routes/service.index'
 import { Route as ServiceBodyPaintRouteImport } from './routes/service.body-paint'
@@ -292,6 +293,11 @@ const PartsOrderRoute = PartsOrderRouteImport.update({
   path: '/parts/order',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartsOverviewRoute = PartsOverviewRouteImport.update({
+  id: '/parts/overview',
+  path: '/parts/overview',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PartsRequisitionRoute = PartsRequisitionRouteImport.update({
   id: '/parts/requisition',
   path: '/parts/requisition',
@@ -394,6 +400,7 @@ export interface FileRoutesByFullPath {
   '/parts/information': typeof PartsInformationRoute
   '/parts/inquiry': typeof PartsInquiryRoute
   '/parts/order': typeof PartsOrderRoute
+  '/parts/overview': typeof PartsOverviewRoute
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
@@ -453,6 +460,7 @@ export interface FileRoutesByTo {
   '/parts/information': typeof PartsInformationRoute
   '/parts/inquiry': typeof PartsInquiryRoute
   '/parts/order': typeof PartsOrderRoute
+  '/parts/overview': typeof PartsOverviewRoute
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
@@ -513,6 +521,7 @@ export interface FileRoutesById {
   '/parts/information': typeof PartsInformationRoute
   '/parts/inquiry': typeof PartsInquiryRoute
   '/parts/order': typeof PartsOrderRoute
+  '/parts/overview': typeof PartsOverviewRoute
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
@@ -574,6 +583,7 @@ export interface FileRouteTypes {
     | '/parts/information'
     | '/parts/inquiry'
     | '/parts/order'
+    | '/parts/overview'
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
@@ -633,6 +643,7 @@ export interface FileRouteTypes {
     | '/parts/information'
     | '/parts/inquiry'
     | '/parts/order'
+    | '/parts/overview'
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
@@ -692,6 +703,7 @@ export interface FileRouteTypes {
     | '/parts/information'
     | '/parts/inquiry'
     | '/parts/order'
+    | '/parts/overview'
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
@@ -752,6 +764,7 @@ export interface RootRouteChildren {
   PartsInformationRoute: typeof PartsInformationRoute
   PartsInquiryRoute: typeof PartsInquiryRoute
   PartsOrderRoute: typeof PartsOrderRoute
+  PartsOverviewRoute: typeof PartsOverviewRoute
   PartsRequisitionRoute: typeof PartsRequisitionRoute
   ServiceBodyPaintRoute: typeof ServiceBodyPaintRoute
   ServiceBookRoute: typeof ServiceBookRoute
@@ -1088,6 +1101,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartsOrderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/parts/overview': {
+      id: '/parts/overview'
+      path: '/parts/overview'
+      fullPath: '/parts/overview'
+      preLoaderRoute: typeof PartsOverviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/parts/requisition': {
       id: '/parts/requisition'
       path: '/parts/requisition'
@@ -1216,6 +1236,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartsInformationRoute: PartsInformationRoute,
   PartsInquiryRoute: PartsInquiryRoute,
   PartsOrderRoute: PartsOrderRoute,
+  PartsOverviewRoute: PartsOverviewRoute,
   PartsRequisitionRoute: PartsRequisitionRoute,
   ServiceBodyPaintRoute: ServiceBodyPaintRoute,
   ServiceBookRoute: ServiceBookRoute,
