@@ -35,7 +35,7 @@ export const NAV: NavItem[] = [
     label: "Service",
     to: "/service",
     children: [
-      { label: "Online Service Booking", blurb: "Reserve a bay in minutes", to: "/service/book" },
+      { label: "Online Service Booking", blurb: "Reserve a bay in minutes", to: "/service/booking" },
       { label: "Quality Service", blurb: "Factory-trained technicians", to: "/service/quality" },
       { label: "Body & Paint Repair", blurb: "Certified collision repair", to: "/service/body-paint" },
       { label: "Warranty", blurb: "Coverage & claims", to: "/service/warranty" },
