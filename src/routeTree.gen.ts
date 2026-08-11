@@ -59,6 +59,7 @@ import { Route as PartsRequisitionRouteImport } from './routes/parts.requisition
 import { Route as ServiceIndexRouteImport } from './routes/service.index'
 import { Route as ServiceBodyPaintRouteImport } from './routes/service.body-paint'
 import { Route as ServiceBookRouteImport } from './routes/service.book'
+import { Route as ServiceBookingRouteImport } from './routes/service.booking'
 import { Route as ServiceDashboardRouteImport } from './routes/service.dashboard'
 import { Route as ServiceDiyRouteImport } from './routes/service.diy'
 import { Route as ServiceMaintenanceRouteImport } from './routes/service.maintenance'
@@ -66,6 +67,8 @@ import { Route as ServiceQualityRouteImport } from './routes/service.quality'
 import { Route as ServiceRecallRouteImport } from './routes/service.recall'
 import { Route as ServiceSkillsContestRouteImport } from './routes/service.skills-contest'
 import { Route as ServiceWarrantyRouteImport } from './routes/service.warranty'
+import { Route as ToyotaCorollaCrossHybridRouteImport } from './routes/toyota.corolla-cross-hybrid'
+import { Route as ToyotaLandCruiser300RouteImport } from './routes/toyota.land-cruiser-300'
 import { Route as VehiclesSlugRouteImport } from './routes/vehicles.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -318,6 +321,11 @@ const ServiceBookRoute = ServiceBookRouteImport.update({
   path: '/service/book',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServiceBookingRoute = ServiceBookingRouteImport.update({
+  id: '/service/booking',
+  path: '/service/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceDashboardRoute = ServiceDashboardRouteImport.update({
   id: '/service/dashboard',
   path: '/service/dashboard',
@@ -351,6 +359,17 @@ const ServiceSkillsContestRoute = ServiceSkillsContestRouteImport.update({
 const ServiceWarrantyRoute = ServiceWarrantyRouteImport.update({
   id: '/service/warranty',
   path: '/service/warranty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToyotaCorollaCrossHybridRoute =
+  ToyotaCorollaCrossHybridRouteImport.update({
+    id: '/toyota/corolla-cross-hybrid',
+    path: '/toyota/corolla-cross-hybrid',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ToyotaLandCruiser300Route = ToyotaLandCruiser300RouteImport.update({
+  id: '/toyota/land-cruiser-300',
+  path: '/toyota/land-cruiser-300',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VehiclesSlugRoute = VehiclesSlugRouteImport.update({
@@ -404,6 +423,7 @@ export interface FileRoutesByFullPath {
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
+  '/service/booking': typeof ServiceBookingRoute
   '/service/dashboard': typeof ServiceDashboardRoute
   '/service/diy': typeof ServiceDiyRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
@@ -411,6 +431,8 @@ export interface FileRoutesByFullPath {
   '/service/recall': typeof ServiceRecallRoute
   '/service/skills-contest': typeof ServiceSkillsContestRoute
   '/service/warranty': typeof ServiceWarrantyRoute
+  '/toyota/corolla-cross-hybrid': typeof ToyotaCorollaCrossHybridRoute
+  '/toyota/land-cruiser-300': typeof ToyotaLandCruiser300Route
   '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about/': typeof AboutIndexRoute
   '/brands/': typeof BrandsIndexRoute
@@ -464,6 +486,7 @@ export interface FileRoutesByTo {
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
+  '/service/booking': typeof ServiceBookingRoute
   '/service/dashboard': typeof ServiceDashboardRoute
   '/service/diy': typeof ServiceDiyRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
@@ -471,6 +494,8 @@ export interface FileRoutesByTo {
   '/service/recall': typeof ServiceRecallRoute
   '/service/skills-contest': typeof ServiceSkillsContestRoute
   '/service/warranty': typeof ServiceWarrantyRoute
+  '/toyota/corolla-cross-hybrid': typeof ToyotaCorollaCrossHybridRoute
+  '/toyota/land-cruiser-300': typeof ToyotaLandCruiser300Route
   '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about': typeof AboutIndexRoute
   '/brands': typeof BrandsIndexRoute
@@ -525,6 +550,7 @@ export interface FileRoutesById {
   '/parts/requisition': typeof PartsRequisitionRoute
   '/service/body-paint': typeof ServiceBodyPaintRoute
   '/service/book': typeof ServiceBookRoute
+  '/service/booking': typeof ServiceBookingRoute
   '/service/dashboard': typeof ServiceDashboardRoute
   '/service/diy': typeof ServiceDiyRoute
   '/service/maintenance': typeof ServiceMaintenanceRoute
@@ -532,6 +558,8 @@ export interface FileRoutesById {
   '/service/recall': typeof ServiceRecallRoute
   '/service/skills-contest': typeof ServiceSkillsContestRoute
   '/service/warranty': typeof ServiceWarrantyRoute
+  '/toyota/corolla-cross-hybrid': typeof ToyotaCorollaCrossHybridRoute
+  '/toyota/land-cruiser-300': typeof ToyotaLandCruiser300Route
   '/vehicles/$slug': typeof VehiclesSlugRoute
   '/about/': typeof AboutIndexRoute
   '/brands/': typeof BrandsIndexRoute
@@ -587,6 +615,7 @@ export interface FileRouteTypes {
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
+    | '/service/booking'
     | '/service/dashboard'
     | '/service/diy'
     | '/service/maintenance'
@@ -594,6 +623,8 @@ export interface FileRouteTypes {
     | '/service/recall'
     | '/service/skills-contest'
     | '/service/warranty'
+    | '/toyota/corolla-cross-hybrid'
+    | '/toyota/land-cruiser-300'
     | '/vehicles/$slug'
     | '/about/'
     | '/brands/'
@@ -647,6 +678,7 @@ export interface FileRouteTypes {
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
+    | '/service/booking'
     | '/service/dashboard'
     | '/service/diy'
     | '/service/maintenance'
@@ -654,6 +686,8 @@ export interface FileRouteTypes {
     | '/service/recall'
     | '/service/skills-contest'
     | '/service/warranty'
+    | '/toyota/corolla-cross-hybrid'
+    | '/toyota/land-cruiser-300'
     | '/vehicles/$slug'
     | '/about'
     | '/brands'
@@ -707,6 +741,7 @@ export interface FileRouteTypes {
     | '/parts/requisition'
     | '/service/body-paint'
     | '/service/book'
+    | '/service/booking'
     | '/service/dashboard'
     | '/service/diy'
     | '/service/maintenance'
@@ -714,6 +749,8 @@ export interface FileRouteTypes {
     | '/service/recall'
     | '/service/skills-contest'
     | '/service/warranty'
+    | '/toyota/corolla-cross-hybrid'
+    | '/toyota/land-cruiser-300'
     | '/vehicles/$slug'
     | '/about/'
     | '/brands/'
@@ -768,6 +805,7 @@ export interface RootRouteChildren {
   PartsRequisitionRoute: typeof PartsRequisitionRoute
   ServiceBodyPaintRoute: typeof ServiceBodyPaintRoute
   ServiceBookRoute: typeof ServiceBookRoute
+  ServiceBookingRoute: typeof ServiceBookingRoute
   ServiceDashboardRoute: typeof ServiceDashboardRoute
   ServiceDiyRoute: typeof ServiceDiyRoute
   ServiceMaintenanceRoute: typeof ServiceMaintenanceRoute
@@ -775,6 +813,8 @@ export interface RootRouteChildren {
   ServiceRecallRoute: typeof ServiceRecallRoute
   ServiceSkillsContestRoute: typeof ServiceSkillsContestRoute
   ServiceWarrantyRoute: typeof ServiceWarrantyRoute
+  ToyotaCorollaCrossHybridRoute: typeof ToyotaCorollaCrossHybridRoute
+  ToyotaLandCruiser300Route: typeof ToyotaLandCruiser300Route
   VehiclesSlugRoute: typeof VehiclesSlugRoute
   AboutIndexRoute: typeof AboutIndexRoute
   BrandsIndexRoute: typeof BrandsIndexRoute
@@ -1136,6 +1176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiceBookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/service/booking': {
+      id: '/service/booking'
+      path: '/service/booking'
+      fullPath: '/service/booking'
+      preLoaderRoute: typeof ServiceBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service/dashboard': {
       id: '/service/dashboard'
       path: '/service/dashboard'
@@ -1183,6 +1230,20 @@ declare module '@tanstack/react-router' {
       path: '/service/warranty'
       fullPath: '/service/warranty'
       preLoaderRoute: typeof ServiceWarrantyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/toyota/corolla-cross-hybrid': {
+      id: '/toyota/corolla-cross-hybrid'
+      path: '/toyota/corolla-cross-hybrid'
+      fullPath: '/toyota/corolla-cross-hybrid'
+      preLoaderRoute: typeof ToyotaCorollaCrossHybridRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/toyota/land-cruiser-300': {
+      id: '/toyota/land-cruiser-300'
+      path: '/toyota/land-cruiser-300'
+      fullPath: '/toyota/land-cruiser-300'
+      preLoaderRoute: typeof ToyotaLandCruiser300RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/vehicles/$slug': {
@@ -1240,6 +1301,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartsRequisitionRoute: PartsRequisitionRoute,
   ServiceBodyPaintRoute: ServiceBodyPaintRoute,
   ServiceBookRoute: ServiceBookRoute,
+  ServiceBookingRoute: ServiceBookingRoute,
   ServiceDashboardRoute: ServiceDashboardRoute,
   ServiceDiyRoute: ServiceDiyRoute,
   ServiceMaintenanceRoute: ServiceMaintenanceRoute,
@@ -1247,6 +1309,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServiceRecallRoute: ServiceRecallRoute,
   ServiceSkillsContestRoute: ServiceSkillsContestRoute,
   ServiceWarrantyRoute: ServiceWarrantyRoute,
+  ToyotaCorollaCrossHybridRoute: ToyotaCorollaCrossHybridRoute,
+  ToyotaLandCruiser300Route: ToyotaLandCruiser300Route,
   VehiclesSlugRoute: VehiclesSlugRoute,
   AboutIndexRoute: AboutIndexRoute,
   BrandsIndexRoute: BrandsIndexRoute,
@@ -1258,13 +1322,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
