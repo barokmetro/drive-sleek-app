@@ -1,30 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
 const TITLE = "Careers | MOENCO Ethiopia";
-const DESCRIPTION = "We hire technicians, sales consultants and support professionals, and invest in manufacturer-certified training pathways.";
-
-export const Route = createFileRoute("/about/careers")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="People"
-      title="Careers"
-      description="Build your career with MOENCO. We hire technicians, sales consultants and support professionals, and invest in manufacturer-certified training pathways."
-      highlights={["Certified training programmes","Clear progression paths","Nationwide opportunities"]}
-    />
-  );
-}
+const DESCRIPTION = "Explore current technical, commercial and corporate career opportunities at MOENCO Ethiopia.";
+export const Route = createFileRoute("/about/careers")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div className="pt-24"><section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8"><div><p className="text-xs font-bold uppercase tracking-[.28em] text-indigo-300">Open roles</p><h1 className="mt-5 text-5xl font-black sm:text-7xl">Bring your craft. Build your path.</h1><p className="mt-6 leading-relaxed text-muted-foreground">We recruit for capability and character, then develop both. Explore current opportunities across workshops, showrooms, parts operations and support functions.</p><div className="mt-10"><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Service Technician</h2><p className="mt-2 text-sm text-muted-foreground">Addis Ababa · Aftersales · Full time</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Parts Analyst</h2><p className="mt-2 text-sm text-muted-foreground">Addis Ababa · Supply chain · Full time</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Sales Consultant</h2><p className="mt-2 text-sm text-muted-foreground">Regional network · Commercial · Full time</p></article></div></div><img src={"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85"} alt="Professionals discussing an opportunity across a table" width={1600} height={1000} className="h-full min-h-[520px] w-full object-cover"/></section></div>); }

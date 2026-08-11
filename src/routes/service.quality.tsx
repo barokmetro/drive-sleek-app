@@ -1,31 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import serviceHero from "@/assets/service-workshop.jpg";
 const TITLE = "Quality Service | MOENCO Ethiopia";
-const DESCRIPTION = "Factory-trained technicians, calibrated diagnostic equipment and a documented digital service record for every vehicle that enters our bays.";
-
-export const Route = createFileRoute("/service/quality")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Service"
-      title="Quality Service"
-      description="Factory-trained technicians, calibrated diagnostic equipment and a documented digital service record for every vehicle that enters our bays."
-      vehicles={[]}
-      highlights={["Factory-trained technicians", "Digital vehicle inspection", "Genuine parts only"]}
-    />
-  );
-}
+const DESCRIPTION = "See MOENCO's quality-controlled service process, from digital diagnosis to final road test.";
+export const Route = createFileRoute("/service/quality")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div><section className="relative min-h-[620px] overflow-hidden pt-24"><img src={serviceHero} alt="Factory-trained technician carrying out a vehicle inspection" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover opacity-50"/><div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"/><div className="relative mx-auto flex min-h-[620px] max-w-7xl items-center px-5 lg:px-8"><div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-sky-300">Workshop standard</p><h1 className="mt-5 text-5xl font-black sm:text-7xl">Measured twice. Released once.</h1><p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Every job follows a repair order, manufacturer procedure and final quality gate. Findings are explained before extra work begins, and replaced parts can be shown on request.</p></div></div></section><section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[.65fr_1.35fr] lg:px-8"><div><p className="text-xs uppercase tracking-[.22em] text-muted-foreground">How it works</p><h2 className="mt-4 text-3xl font-black">A clear path from question to action.</h2></div><div className="space-y-4"><article className="relative border-l border-silver/30 py-4 pl-8"><span className="text-xs font-bold text-sky-300">01</span><h2 className="mt-2 text-xl font-black">Reception inspection</h2><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Mileage, warning lights, exterior condition and customer concerns recorded.</p></article><article className="relative border-l border-silver/30 py-4 pl-8"><span className="text-xs font-bold text-sky-300">02</span><h2 className="mt-2 text-xl font-black">Diagnosis & approval</h2><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Measured findings translated into a clear estimate.</p></article><article className="relative border-l border-silver/30 py-4 pl-8"><span className="text-xs font-bold text-sky-300">03</span><h2 className="mt-2 text-xl font-black">Repair & verification</h2><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Correct tools, torque values and genuine components.</p></article><article className="relative border-l border-silver/30 py-4 pl-8"><span className="text-xs font-bold text-sky-300">04</span><h2 className="mt-2 text-xl font-black">Road test & handover</h2><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Final checks documented before keys are returned.</p></article></div></section></div>); }

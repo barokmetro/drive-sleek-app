@@ -1,31 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import suzukiHero from "@/assets/suzuki-swift-city.jpg";
 const TITLE = "Suzuki | MOENCO Ethiopia";
-const DESCRIPTION = "Suzuki models distributed by MOENCO — from the Dzire commuter to compact crossovers, engineered for low running costs.";
-
-export const Route = createFileRoute("/brands/suzuki")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Brand"
-      title="Suzuki"
-      description="Compact, efficient and value-first mobility. Suzuki models distributed by MOENCO — from the Dzire commuter to compact crossovers, engineered for low running costs."
-      vehicles={["dzire"]}
-      highlights={["Low total cost of ownership","Compact city footprint","Affordable genuine parts"]}
-    />
-  );
-}
+const DESCRIPTION = "Explore compact, fuel-efficient Suzuki vehicles supplied and supported by MOENCO Ethiopia.";
+export const Route = createFileRoute("/brands/suzuki")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div><section className="relative isolate min-h-[700px] overflow-hidden pt-24"><img src={suzukiHero} alt="Blue Suzuki Swift driving through a modern city" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-transparent"/><div className="relative mx-auto flex min-h-[700px] max-w-7xl items-end px-5 pb-16 lg:px-8"><div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-blue-400">Suzuki / Small cars for a big world</p><h1 className="mt-5 text-5xl font-black leading-[.92] sm:text-7xl">Designed around real life.</h1><p className="mt-6 max-w-2xl leading-relaxed text-foreground/70">Suzuki keeps weight, complexity and running costs intelligently low. The result is responsive city mobility, practical cabins and dependable performance for drivers who value every kilometre.</p></div></div></section><section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-4 md:grid-cols-3"><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-blue-400">01</span><h2 className="mt-10 text-xl font-black">Swift</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Agile hatchback with confident road manners.</p><Link to="/vehicles/swift" className="mt-6 inline-flex items-center text-xs font-bold text-blue-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-blue-400">02</span><h2 className="mt-10 text-xl font-black">Dzire</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">A compact sedan with generous luggage space.</p><Link to="/vehicles/dzire" className="mt-6 inline-flex items-center text-xs font-bold text-blue-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-blue-400">03</span><h2 className="mt-10 text-xl font-black">Alto</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Efficient urban transport with a tiny footprint.</p><Link to="/e-showroom" className="mt-6 inline-flex items-center text-xs font-bold text-blue-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article></div></section></div>); }

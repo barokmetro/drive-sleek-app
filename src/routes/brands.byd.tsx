@@ -1,31 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
-const TITLE = "BYD | MOENCO Ethiopia";
-const DESCRIPTION = "BYD's all-electric line-up combines Blade Battery safety with long range and rapid charging, sold and serviced by MOENCO.";
-
-export const Route = createFileRoute("/brands/byd")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Brand"
-      title="BYD"
-      description="Electric performance, ready for Ethiopian roads. BYD's all-electric line-up combines Blade Battery safety with long range and rapid charging, sold and serviced by MOENCO."
-      vehicles={["atto-3"]}
-      highlights={["Blade Battery technology","Fast-charging support","EV-trained service network"]}
-    />
-  );
-}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import bydHero from "@/assets/byd-electric-future.jpg";
+const TITLE = "BYD Brand | MOENCO Ethiopia";
+const DESCRIPTION = "Meet BYD electric vehicles with Blade Battery technology, officially supported by MOENCO Ethiopia.";
+export const Route = createFileRoute("/brands/byd")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div><section className="relative isolate min-h-[700px] overflow-hidden pt-24"><img src={bydHero} alt="BYD electric sedan and crossover at blue hour" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-transparent"/><div className="relative mx-auto flex min-h-[700px] max-w-7xl items-end px-5 pb-16 lg:px-8"><div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-cyan-300">BYD / Technology</p><h1 className="mt-5 text-5xl font-black leading-[.92] sm:text-7xl">Electric, engineered from first principles.</h1><p className="mt-6 max-w-2xl leading-relaxed text-foreground/70">BYD develops its own batteries, motors, power electronics and vehicle platforms. That vertical integration delivers efficient packaging, reassuring safety and smooth performance.</p></div></div></section><section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-4 md:grid-cols-3"><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-cyan-300">01</span><h2 className="mt-10 text-xl font-black">Blade Battery</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Long, thin cells engineered for safety and space.</p><Link to="/byd-ethiopia" className="mt-6 inline-flex items-center text-xs font-bold text-cyan-300">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-cyan-300">02</span><h2 className="mt-10 text-xl font-black">e-Platform 3.0</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">An EV architecture integrating the core systems.</p><Link to="/byd-ethiopia/models" className="mt-6 inline-flex items-center text-xs font-bold text-cyan-300">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-cyan-300">03</span><h2 className="mt-10 text-xl font-black">MOENCO EV care</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">High-voltage trained local support.</p><Link to="/byd-ethiopia/charging" className="mt-6 inline-flex items-center text-xs font-bold text-cyan-300">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article></div></section></div>); }
