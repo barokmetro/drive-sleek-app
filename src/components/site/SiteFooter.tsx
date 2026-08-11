@@ -33,7 +33,7 @@ const COLUMNS: { title: string; links: { label: string; to: string }[] }[] = [
     title: "Parts",
     links: [
       { label: "Battery", to: "/parts/battery" },
-      { label: "Parts Overview", to: "/parts" },
+      { label: "Parts Overview", to: "/parts/overview" },
       { label: "Dealers", to: "/parts/dealers" },
       { label: "Parts Requisition", to: "/parts/requisition" },
       { label: "Parts Inquiry", to: "/parts/inquiry" },
