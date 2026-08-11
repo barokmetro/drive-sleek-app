@@ -1,31 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
 const TITLE = "Authorised Parts Dealers | MOENCO Ethiopia";
-const DESCRIPTION = "Find an authorised MOENCO parts dealer near you. Every dealer in the network is supplied directly from our central warehouse in Addis Ababa.";
-
-export const Route = createFileRoute("/parts/dealers")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Parts"
-      title="Authorised Parts Dealers"
-      description="Find an authorised MOENCO parts dealer near you. Every dealer in the network is supplied directly from our central warehouse in Addis Ababa."
-      vehicles={[]}
-      highlights={["Nationwide dealer network", "Direct factory supply", "Verified genuine stock"]}
-    />
-  );
-}
+const DESCRIPTION = "Find authorised MOENCO parts counters supplied through the central Addis Ababa warehouse.";
+export const Route = createFileRoute("/parts/dealers")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div className="pt-24"><section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8"><div><p className="text-xs font-bold uppercase tracking-[.28em] text-emerald-300">Authorised network</p><h1 className="mt-5 text-5xl font-black sm:text-7xl">Genuine stock, closer to you.</h1><p className="mt-6 leading-relaxed text-muted-foreground">Every listed counter receives traceable supply from MOENCO, uses current electronic catalogues and can escalate uncommon requests to our central parts specialists.</p><div className="mt-10"><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Addis Ababa</h2><p className="mt-2 text-sm text-muted-foreground">Head office parts counter · Mon–Sat</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Kaliti</h2><p className="mt-2 text-sm text-muted-foreground">Commercial and fleet parts desk · Mon–Sat</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Hawassa</h2><p className="mt-2 text-sm text-muted-foreground">Regional authorised dealer · Mon–Fri</p></article></div></div><img src={"https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=85"} alt="Organised automotive parts warehouse and distribution aisle" width={1600} height={1000} className="h-full min-h-[520px] w-full object-cover"/></section></div>); }

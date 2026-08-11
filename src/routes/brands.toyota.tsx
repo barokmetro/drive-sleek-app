@@ -1,31 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import lc300HeroAsset from "@/assets/lc300-hero.jpg.asset.json";
+const lc300Hero = lc300HeroAsset.url;
 const TITLE = "Toyota | MOENCO Ethiopia";
-const DESCRIPTION = "Discover the Toyota range in Ethiopia — Corolla, RAV4, Hilux, Hiace and the Land Cruiser family, with genuine parts and certified service.";
-
-export const Route = createFileRoute("/brands/toyota")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Brand"
-      title="Toyota"
-      description="Sedans, SUVs, pickups and vans built to last. Discover the Toyota range in Ethiopia — Corolla, RAV4, Hilux, Hiace and the Land Cruiser family, with genuine parts and certified service."
-      vehicles={["land-cruiser","hilux","rav4","corolla"]}
-      highlights={["Land Cruiser 300 & Prado","Hilux and Hiace for business","Hybrid-ready RAV4 and Corolla"]}
-    />
-  );
-}
+const DESCRIPTION = "Discover Toyota SUVs, pickups, passenger cars and hybrid vehicles available from MOENCO Ethiopia.";
+export const Route = createFileRoute("/brands/toyota")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div><section className="relative isolate min-h-[700px] overflow-hidden pt-24"><img src={lc300Hero} alt="Toyota Land Cruiser 300 on Ethiopian highland terrain" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-transparent"/><div className="relative mx-auto flex min-h-[700px] max-w-7xl items-end px-5 pb-16 lg:px-8"><div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-red-400">Toyota / Ethiopia</p><h1 className="mt-5 text-5xl font-black leading-[.92] sm:text-7xl">Start your impossible.</h1><p className="mt-6 max-w-2xl leading-relaxed text-foreground/70">From the Land Cruiser 300 to the Corolla Cross Hybrid, Toyota engineering is shaped by decades of hard use, continuous improvement and an ownership network that keeps every vehicle working.</p></div></div></section><section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-4 md:grid-cols-3"><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-red-400">01</span><h2 className="mt-10 text-xl font-black">Land Cruiser 300</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Twin-turbo flagship 4×4.</p><Link to="/toyota/land-cruiser-300" className="mt-6 inline-flex items-center text-xs font-bold text-red-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-red-400">02</span><h2 className="mt-10 text-xl font-black">Corolla Cross Hybrid</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Self-charging compact SUV.</p><Link to="/toyota/corolla-cross-hybrid" className="mt-6 inline-flex items-center text-xs font-bold text-red-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-red-400">03</span><h2 className="mt-10 text-xl font-black">Hilux</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">A pickup trusted by demanding fleets.</p><Link to="/vehicles/hilux" className="mt-6 inline-flex items-center text-xs font-bold text-red-400">Explore <ArrowRight className="ml-2 h-4 w-4"/></Link></article></div></section></div>); }

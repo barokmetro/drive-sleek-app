@@ -1,31 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import chargeHero from "@/assets/byd-home-charging.jpg";
 const TITLE = "Battery Electric Vehicles | MOENCO Ethiopia";
-const DESCRIPTION = "Fully electric vehicles supplied, charged and serviced by MOENCO — with high-voltage trained technicians and genuine parts held locally.";
-
-export const Route = createFileRoute("/cng-hev/bev")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Electrification"
-      title="Battery Electric Vehicles"
-      description="Fully electric vehicles supplied, charged and serviced by MOENCO — with high-voltage trained technicians and genuine parts held locally."
-      vehicles={["atto-3"]}
-      highlights={["Zero tailpipe emissions", "Home wallbox installation", "High-voltage trained technicians"]}
-    />
-  );
-}
+const DESCRIPTION = "Explore full battery-electric driving, charging and high-voltage service support from MOENCO.";
+export const Route = createFileRoute("/cng-hev/bev")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div className="pt-24"><section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8"><div><p className="text-xs font-bold uppercase tracking-[.28em] text-cyan-300">BEV essentials</p><h1 className="mt-5 text-5xl font-black sm:text-7xl">Simple motion. Serious engineering.</h1><p className="mt-6 leading-relaxed text-muted-foreground">A battery-electric vehicle replaces the engine, fuel tank and exhaust with a high-voltage battery, inverter and electric motor—delivering immediate response and fewer routine service items.</p><div className="mt-10"><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Battery</h2><p className="mt-2 text-sm text-muted-foreground">Stores DC energy beneath the cabin.</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Inverter</h2><p className="mt-2 text-sm text-muted-foreground">Controls power delivery and regeneration.</p></article><article className="border-t border-silver/30 py-7"><h2 className="text-xl font-black">Motor</h2><p className="mt-2 text-sm text-muted-foreground">Turns electrical energy directly into motion.</p></article></div></div><img src={chargeHero} alt="Modern electric crossover connected to a home wallbox charger" width={1600} height={1000} className="h-full min-h-[520px] w-full object-cover"/></section></div>); }

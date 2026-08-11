@@ -1,31 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
 const TITLE = "E-Showroom | MOENCO Ethiopia";
-const DESCRIPTION = "Configure models, compare specifications and reserve your vehicle online — then complete the handover at your nearest branch.";
-
-export const Route = createFileRoute("/e-showroom")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Digital"
-      title="E-Showroom"
-      description="Browse the entire range online. Configure models, compare specifications and reserve your vehicle online — then complete the handover at your nearest branch."
-      vehicles={["land-cruiser","hilux","rav4","corolla","atto-3","dzire"]}
-      highlights={["360° model views","Side-by-side comparison","Online reservation"]}
-    />
-  );
-}
+const DESCRIPTION = "Browse Toyota, Suzuki and BYD vehicles by body style, powertrain and intended use.";
+export const Route = createFileRoute("/e-showroom")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div><section className="relative isolate min-h-[700px] overflow-hidden pt-24"><img src={"https://images.unsplash.com/photo-1562141961-b5d9cbdabdd6?auto=format&fit=crop&w=1600&q=85"} alt="Premium vehicles displayed inside a modern showroom" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-transparent"/><div className="relative mx-auto flex min-h-[700px] max-w-7xl items-end px-5 pb-16 lg:px-8"><div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-silver">Digital showroom</p><h1 className="mt-5 text-5xl font-black leading-[.92] sm:text-7xl">Find the shape of your next journey.</h1><p className="mt-6 max-w-2xl leading-relaxed text-foreground/70">Compare flagship SUVs, efficient urban cars, commercial workhorses and electric vehicles before arranging a closer look with a product specialist.</p></div></div></section><section className="mx-auto max-w-7xl px-5 py-20 lg:px-8"><div className="grid gap-4 md:grid-cols-3"><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-silver">01</span><h2 className="mt-10 text-xl font-black">SUV</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Land Cruiser 300 · Corolla Cross · Atto 3</p></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-silver">02</span><h2 className="mt-10 text-xl font-black">Passenger</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Corolla · Swift · Dzire · BYD Seal</p></article><article className="group border border-border bg-card p-7 transition hover:border-silver/50"><span className="text-[10px] font-bold uppercase tracking-[.2em] text-silver">03</span><h2 className="mt-10 text-xl font-black">Commercial</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Hilux · Hiace · fleet solutions</p></article></div></section></div>); }

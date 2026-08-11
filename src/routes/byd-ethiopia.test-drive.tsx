@@ -1,30 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
-
-const TITLE = "Book a Test Drive | MOENCO Ethiopia";
-const DESCRIPTION = "Book a BYD test drive at your nearest MOENCO showroom and experience instant torque and near-silent running.";
-
-export const Route = createFileRoute("/byd-ethiopia/test-drive")({
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Page,
-});
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Experience"
-      title="Book a Test Drive"
-      description="Feel electric performance for yourself. Book a BYD test drive at your nearest MOENCO showroom and experience instant torque and near-silent running."
-      highlights={["Flexible time slots","Guided EV walkthrough","No obligation"]}
-    />
-  );
-}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check, Search } from "lucide-react";
+import testHero from "@/assets/byd-test-drive.jpg";
+const TITLE = "Book a BYD Test Drive | MOENCO Ethiopia";
+const DESCRIPTION = "Request a guided BYD electric vehicle test drive at a MOENCO showroom in Ethiopia.";
+export const Route = createFileRoute("/byd-ethiopia/test-drive")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page() { return (<div className="grid min-h-[780px] pt-24 lg:grid-cols-2"><section className="relative min-h-[420px] overflow-hidden"><img src={testHero} alt="Customer beginning an electric vehicle test drive with a product specialist" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent"/><div className="absolute bottom-10 left-6 right-6 lg:left-12"><p className="text-xs font-bold uppercase tracking-[.28em] text-cyan-300">Electric test drive</p><h1 className="mt-4 text-4xl font-black sm:text-6xl">Feel the difference before we explain it.</h1><p className="mt-5 max-w-xl text-sm leading-relaxed text-foreground/70">Choose a model and preferred day. A BYD product specialist will demonstrate charging, regeneration, driver displays and the quiet response of the electric powertrain.</p></div></section><section className="flex items-center bg-card px-6 py-14 lg:px-16"><form onSubmit={e=>e.preventDefault()} className="w-full max-w-xl"><h2 className="text-2xl font-black">Enter your details</h2><div className="mt-8 space-y-5"><label className="block"><span className="mb-2 block text-xs font-bold uppercase tracking-[.18em] text-muted-foreground">Choose</span><input className="w-full border border-border bg-background px-4 py-4 text-sm text-foreground outline-none focus:border-silver" placeholder="Atto 3, Seal or Dolphin." /></label><label className="block"><span className="mb-2 block text-xs font-bold uppercase tracking-[.18em] text-muted-foreground">Experience</span><input className="w-full border border-border bg-background px-4 py-4 text-sm text-foreground outline-none focus:border-silver" placeholder="City response, ride comfort and regeneration." /></label><label className="block"><span className="mb-2 block text-xs font-bold uppercase tracking-[.18em] text-muted-foreground">Understand</span><input className="w-full border border-border bg-background px-4 py-4 text-sm text-foreground outline-none focus:border-silver" placeholder="Charging, warranty and ownership support." /></label></div><button className="mt-7 inline-flex w-full items-center justify-center bg-primary px-5 py-4 text-sm font-bold text-primary-foreground">Send request <ArrowRight className="ml-2 h-4 w-4"/></button></form></section></div>); }
