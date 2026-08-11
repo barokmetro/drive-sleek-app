@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Mountain, ShieldCheck, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import lc300Hero from "@/assets/lc300-hero.jpg";
+import lc300HeroAsset from "@/assets/lc300-hero.jpg.asset.json";
+const lc300Hero = lc300HeroAsset.url;
 
 const TITLE = "Toyota Land Cruiser 300 | MOENCO Ethiopia";
 const DESCRIPTION = "Explore the Toyota Land Cruiser 300: twin-turbo V6 power, 10-speed automatic transmission and 235 mm ground clearance.";

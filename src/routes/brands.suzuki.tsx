@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Search } from "lucide-react";
-import suzukiHero from "@/assets/suzuki-swift-city.jpg";
+import suzukiHeroAsset from "@/assets/suzuki-swift-city.jpg.asset.json";
+const suzukiHero = suzukiHeroAsset.url;
 const TITLE = "Suzuki | MOENCO Ethiopia";
 const DESCRIPTION = "Explore compact, fuel-efficient Suzuki vehicles supplied and supported by MOENCO Ethiopia.";
 export const Route = createFileRoute("/brands/suzuki")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });

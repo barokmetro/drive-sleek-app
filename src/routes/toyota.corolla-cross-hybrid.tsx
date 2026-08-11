@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Battery, Leaf, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import corollaHero from "@/assets/corolla-cross-hybrid.jpg";
+import corollaHeroAsset from "@/assets/corolla-cross-hybrid.jpg.asset.json";
+const corollaHero = corollaHeroAsset.url;
 
 const TITLE="Toyota Corolla Cross Hybrid | MOENCO Ethiopia"; const DESCRIPTION="Meet the Toyota Corolla Cross Hybrid with a 1.8L hybrid engine, lithium-ion battery and practical compact-SUV versatility.";
 export const Route=createFileRoute("/toyota/corolla-cross-hybrid")({head:()=>({meta:[{title:TITLE},{name:"description",content:DESCRIPTION},{property:"og:title",content:TITLE},{property:"og:description",content:DESCRIPTION},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:CorollaCrossPage});

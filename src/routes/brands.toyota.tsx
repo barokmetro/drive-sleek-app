@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Search } from "lucide-react";
-import lc300Hero from "@/assets/lc300-hero.jpg";
+import lc300HeroAsset from "@/assets/lc300-hero.jpg.asset.json";
+const lc300Hero = lc300HeroAsset.url;
 const TITLE = "Toyota | MOENCO Ethiopia";
 const DESCRIPTION = "Discover Toyota SUVs, pickups, passenger cars and hybrid vehicles available from MOENCO Ethiopia.";
 export const Route = createFileRoute("/brands/toyota")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });

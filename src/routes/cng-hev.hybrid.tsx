@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Search } from "lucide-react";
-import corollaHero from "@/assets/corolla-cross-hybrid.jpg";
+import corollaHeroAsset from "@/assets/corolla-cross-hybrid.jpg.asset.json";
+const corollaHero = corollaHeroAsset.url;
 const TITLE = "Toyota Hybrid Electric Vehicles | MOENCO Ethiopia";
 const DESCRIPTION = "Learn how Toyota self-charging hybrid vehicles recover energy and reduce fuel use without plugging in.";
 export const Route = createFileRoute("/cng-hev/hybrid")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });

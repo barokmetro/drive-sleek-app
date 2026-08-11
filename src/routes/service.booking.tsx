@@ -2,7 +2,8 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CalendarDays, Check, ChevronLeft, ChevronRight, MapPin, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import workshop from "@/assets/service-workshop.jpg";
+import workshopAsset from "@/assets/service-workshop.jpg.asset.json";
+const workshop = workshopAsset.url;
 
 const TITLE="Book a Service | MOENCO Ethiopia"; const DESCRIPTION="Book a MOENCO service appointment in four simple steps: vehicle, workshop, date and contact details.";
 export const Route=createFileRoute("/service/booking")({head:()=>({meta:[{title:TITLE},{name:"description",content:DESCRIPTION},{property:"og:title",content:TITLE},{property:"og:description",content:DESCRIPTION},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:BookingPage});

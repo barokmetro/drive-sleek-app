@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BatteryCharging, Gauge, ShieldCheck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
-import bydHero from "@/assets/byd-electric-future.jpg";
+import bydHeroAsset from "@/assets/byd-electric-future.jpg.asset.json";
+const bydHero = bydHeroAsset.url;
 
 const TITLE = "BYD Ethiopia | MOENCO Ethiopia";
 const DESCRIPTION = "BYD Ethiopia brings Blade Battery safety, long range and rapid charging to the Ethiopian market, with MOENCO service backing.";

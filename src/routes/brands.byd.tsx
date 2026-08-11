@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Search } from "lucide-react";
-import bydHero from "@/assets/byd-electric-future.jpg";
+import bydHeroAsset from "@/assets/byd-electric-future.jpg.asset.json";
+const bydHero = bydHeroAsset.url;
 const TITLE = "BYD Brand | MOENCO Ethiopia";
 const DESCRIPTION = "Meet BYD electric vehicles with Blade Battery technology, officially supported by MOENCO Ethiopia.";
 export const Route = createFileRoute("/brands/byd")({ head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: Page });

@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, HardHat, Settings, Shield, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import machineryHero from "@/assets/machinery-heavy-duty.jpg";
+import machineryHeroAsset from "@/assets/machinery-heavy-duty.jpg.asset.json";
+const machineryHero = machineryHeroAsset.url;
 
 const TITLE = "Machineries | MOENCO Ethiopia";
 const DESCRIPTION = "Forklifts, generators and construction equipment supplied, serviced and supported by MOENCO's industrial division.";
