@@ -145,6 +145,7 @@ function OverviewPage() {
         <img
           src={BANNER}
           alt="Auto mechanic working in a service workshop"
+          loading="lazy"
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />

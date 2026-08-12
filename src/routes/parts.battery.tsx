@@ -12,7 +12,7 @@ const HERO_IMG =
 const HOOD_IMG =
   "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80";
 const TERMINAL_IMG =
-  "https://images.unsplash.com/photo-1632823469850-1b7b1e8b7e2f?auto=format&fit=crop&w=1200&q=80";
+  "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85";
 
 export const Route = createFileRoute("/parts/battery")({
   head: () => ({
@@ -117,7 +117,7 @@ function BatteryPage() {
                 variant="outline"
                 className="rounded-full border-silver/40 bg-transparent px-7 text-foreground hover:bg-card"
               >
-                <Link to="/service/book">Book a free battery test</Link>
+                <Link to="/service/booking">Book a battery test</Link>
               </Button>
             </div>
           </Reveal>

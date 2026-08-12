@@ -44,7 +44,7 @@ const COLUMNS: { title: string; links: { label: string; to: string }[] }[] = [
   {
     title: "Services",
     links: [
-      { label: "Online Service Booking", to: "/service/book" },
+      { label: "Online Service Booking", to: "/service/booking" },
       { label: "Quality Service", to: "/service/quality" },
       { label: "Body & Paint", to: "/service/body-paint" },
       { label: "Warranty", to: "/service/warranty" },
@@ -87,10 +87,7 @@ export function SiteFooter() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.4fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-silver/40 bg-card font-display text-sm font-black text-silver">
-                M
-              </span>
+            <div className="flex items-center gap-3 border-l border-silver/40 pl-3">
               <span>
                 <span className="block font-display text-lg font-extrabold text-chrome">
                   MOENCO
