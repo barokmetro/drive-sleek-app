@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Facebook, MapPin, Mail, MessageCircle, X } from "lucide-react";
+import { Facebook, MapPin, Mail, MessageCircle, Send, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const SOCIALS = [
-  { label: "Facebook", href: "https://facebook.com", Icon: Facebook },
+  { label: "Facebook", href: "https://facebook.com/MOENCOEthiopiaOffical", Icon: Facebook },
+  { label: "Telegram", href: "https://t.me/MOENCO_Ethiopia", Icon: Send },
   { label: "Find a branch", href: "https://maps.google.com/?q=MOENCO+Addis+Ababa", Icon: MapPin },
   { label: "Email us", href: "mailto:info@moenco.com", Icon: Mail },
   { label: "WhatsApp", href: "https://wa.me/251115503366", Icon: MessageCircle },
@@ -30,11 +32,19 @@ export function FloatingWidgets() {
 
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
         {chatOpen && (
-          <div className="w-72 rounded-2xl border border-silver/25 bg-card p-4 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.95)]">
-            <p className="font-display text-sm font-bold text-foreground">Chat with MOENCO</p>
+          <div role="dialog" aria-label="MOENCO chat" className="w-[min(22rem,calc(100vw-3rem))] overflow-hidden rounded-2xl border border-silver/25 bg-card shadow-2xl">
+            <div className="flex items-center justify-between border-b border-border px-5 py-4">
+              <div>
+                <p className="font-display text-sm font-bold text-foreground">MOENCO Assist</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.16em] text-silver">Team online</p>
+              </div>
+              <Button type="button" variant="ghost" size="icon" aria-label="Close chat" onClick={() => setChatOpen(false)}>
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+            <div className="p-5">
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              Our sales and service team replies on WhatsApp within working hours,
-              Monday to Saturday.
+              Welcome. Start a secure WhatsApp conversation with our sales, parts, or service team. We reply during working hours, Monday to Saturday.
             </p>
             <a
               href="https://wa.me/251115503366"
@@ -44,17 +54,20 @@ export function FloatingWidgets() {
             >
               Start a conversation
             </a>
+            </div>
           </div>
         )}
-        <button
+        <Button
+          type="button"
+          size="icon"
           aria-label={chatOpen ? "Close chat" : "Open chat"}
           onClick={() => setChatOpen((v) => !v)}
-          className={`grid h-14 w-14 place-items-center rounded-full bg-[oklch(0.62_0.16_150)] text-foreground transition-transform duration-300 hover:scale-105 ${
+          className={`h-14 w-14 rounded-full bg-[oklch(0.62_0.16_150)] text-foreground transition-transform duration-300 hover:scale-105 hover:bg-[oklch(0.62_0.16_150)] ${
             chatOpen ? "" : "chat-pulse"
           }`}
         >
           {chatOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-6 w-6" />}
-        </button>
+        </Button>
       </div>
     </>
   );

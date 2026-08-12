@@ -1,10 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/PlaceholderPage";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 const TITLE = "Book a Service | MOENCO Ethiopia";
 const DESCRIPTION = "Choose your branch, model and preferred time. We confirm your booking by SMS and prepare the parts before you arrive.";
 
 export const Route = createFileRoute("/service/book")({
+  beforeLoad: () => {
+    throw redirect({ to: "/service/booking", replace: true });
+  },
   head: () => ({
     meta: [
       { title: TITLE },
@@ -15,16 +17,5 @@ export const Route = createFileRoute("/service/book")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: () => null,
 });
-
-function Page() {
-  return (
-    <PlaceholderPage
-      eyebrow="Service"
-      title="Book a Service"
-      description="Reserve a bay in under two minutes. Choose your branch, model and preferred time. We confirm your booking by SMS and prepare the parts before you arrive."
-      highlights={["Same-week appointments","SMS confirmation","Courtesy vehicle on request"]}
-    />
-  );
-}
