@@ -84,6 +84,12 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex max-w-[1440px] items-center gap-4 px-5 py-3.5 lg:px-8">
         <NavLink to="/" className="group flex min-w-0 items-center gap-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg"
+            alt="MOENCO logo"
+            loading="lazy"
+            className="h-8 w-auto shrink-0 opacity-90 transition-opacity group-hover:opacity-100 sm:h-10"
+          />
           <span className="min-w-0 border-l border-silver/40 pl-3 leading-none transition-colors group-hover:border-silver">
             <span className="block truncate font-display text-xl font-extrabold text-chrome">
               MOENCO
@@ -93,6 +99,7 @@ export function SiteHeader() {
             </span>
           </span>
         </NavLink>
+
 
         <nav className="ml-auto hidden items-center gap-0.5 xl:flex">
           {NAV.map((item) =>
