@@ -26,7 +26,7 @@ function Page() {
   return (
     <div className="bg-[#061018] text-foreground">
       <section className="relative isolate min-h-[760px] overflow-hidden">
-        <img src={bydHero} alt="BYD Seal and Atto 3 electric vehicles in a futuristic plaza" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={bydHero} alt="BYD Seal and Atto 3 electric vehicles in a futuristic plaza" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover" / loading="lazy">
         <div className="absolute inset-0 bg-gradient-to-r from-[#03131d]/95 via-[#03131d]/65 to-transparent" />
         <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-end px-5 pb-20 pt-36 lg:px-8">
           <div className="max-w-2xl">
