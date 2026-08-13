@@ -17,7 +17,7 @@ export function Hero() {
         width={1920}
         height={1088}
         className="absolute inset-0 h-full w-full object-cover opacity-70 grayscale"
-      / loading="lazy">
+      loading="lazy" />
       <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.11_0.002_285)] via-[oklch(0.11_0.002_285)]/85 to-[oklch(0.11_0.002_285)]/35" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[oklch(0.115_0.002_285)] to-transparent" />
 

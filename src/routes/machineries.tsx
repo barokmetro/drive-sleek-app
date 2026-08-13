@@ -25,7 +25,7 @@ function Page() {
   return (
     <div className="bg-[#15130f] text-foreground">
       <section className="relative min-h-[720px] overflow-hidden border-b-8 border-amber-400">
-        <img src={machineryHero} alt="Yellow tracked excavator and agricultural tractor at an Ethiopian earthworks site" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover" / loading="lazy">
+        <img src={machineryHero} alt="Yellow tracked excavator and agricultural tractor at an Ethiopian earthworks site" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#100f0b]/95 via-[#100f0b]/60 to-transparent" />
         <div className="relative mx-auto flex min-h-[720px] max-w-7xl items-center px-5 pt-24 lg:px-8"><div className="max-w-2xl"><span className="inline-flex items-center gap-2 border border-amber-400 bg-[#17130a]/70 px-3 py-2 text-xs font-bold uppercase tracking-[.25em] text-amber-300"><HardHat className="h-4 w-4"/> Industrial division</span><h1 className="mt-6 text-5xl font-black uppercase leading-[.9] sm:text-7xl">Built to move<br/><span className="text-amber-400">Ethiopia.</span></h1><p className="mt-7 max-w-xl text-base leading-relaxed text-foreground/70">Excavators, tractors, material-handling equipment and power systems selected for altitude, dust and demanding duty cycles—backed by field technicians and genuine parts.</p><Button asChild size="lg" className="mt-9 rounded-none bg-amber-400 text-[#15130f] hover:bg-amber-300"><Link to="/machinery/products">View equipment <ArrowRight className="ml-2 h-4 w-4"/></Link></Button></div></div>
       </section>
