@@ -184,7 +184,7 @@ export function SiteHeader() {
         role="dialog"
         aria-modal="true"
         aria-label="Search MOENCO"
-        className={`fixed inset-0 z-[70] bg-background/95 px-5 pt-24 backdrop-blur-2xl transition-all duration-300 ${
+        className={`fixed inset-0 z-[70] overflow-y-auto bg-background px-5 pt-24 transition-all duration-300 ${
           searchOpen ? "visible opacity-100" : "invisible pointer-events-none opacity-0"
         }`}
       >
@@ -205,7 +205,7 @@ export function SiteHeader() {
           <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             {normalizedQuery ? `${suggestions.length} suggestions` : "Popular destinations"}
           </p>
-          <div className="mt-3 divide-y divide-border border-y border-border">
+          <div className="mt-3 divide-y divide-border border-y border-border bg-background">
             {suggestions.map((item) => (
               <NavLink
                 key={item.to}

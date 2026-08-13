@@ -17,7 +17,7 @@ export function Hero() {
         width={1920}
         height={1088}
         className="absolute inset-0 h-full w-full object-cover opacity-70 grayscale"
-      />
+      loading="lazy" />
       <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.11_0.002_285)] via-[oklch(0.11_0.002_285)]/85 to-[oklch(0.11_0.002_285)]/35" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[oklch(0.115_0.002_285)] to-transparent" />
 
@@ -62,7 +62,7 @@ export function Hero() {
             Explore Showroom <ChevronRight className="ml-1 h-4 w-4" />
           </Link>
           <Link
-            to="/service/book"
+            to="/service/booking"
             className="silver-glow inline-flex items-center rounded-full border border-silver/35 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-foreground"
           >
             Book a Service

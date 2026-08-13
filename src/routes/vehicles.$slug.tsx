@@ -46,6 +46,7 @@ function VehicleDetail() {
           alt={`${vehicle.brand} ${vehicle.name}`}
           width={1920}
           height={1080}
+          loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/70 to-charcoal/20" />
@@ -75,7 +76,7 @@ function VehicleDetail() {
               variant="outline"
               className="rounded-full border-charcoal-foreground/30 bg-transparent px-7 text-charcoal-foreground hover:bg-charcoal-foreground/10 hover:text-charcoal-foreground"
             >
-              <Link to="/service/book">Book a test drive</Link>
+              <Link to="/service/booking">Book a test drive</Link>
             </Button>
           </div>
         </div>
