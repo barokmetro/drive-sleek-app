@@ -85,7 +85,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1440px] items-center gap-4 px-5 py-3.5 lg:px-8">
         <NavLink to="/" className="group flex min-w-0 items-center gap-3">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg"
+            src="/moenco-logo.png"
             alt="MOENCO logo"
             loading="lazy"
             className="h-8 w-auto shrink-0 opacity-90 transition-opacity group-hover:opacity-100 sm:h-10"
